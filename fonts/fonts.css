@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'montsemibold';
+  src: url('mont/montsemibold-webfont.eot');
+  src: url('mont/montsemibold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('mont/montsemibold-webfont.woff2') format('woff2'),
+       url('mont/montsemibold-webfont.woff') format('woff'),
+       url('mont/montsemibold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'montbold';
+  src: url('mont/montbold-webfont.eot');
+  src: url('mont/montbold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('mont/montbold-webfont.woff2') format('woff2'),
+       url('mont/montbold-webfont.woff') format('woff'),
+       url('mont/montbold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
