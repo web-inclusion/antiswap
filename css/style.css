@@ -1,0 +1,12 @@
+/* font-family: 'Geologica', sans-serif;
+font-family: 'Nunito Sans', sans-serif; */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
