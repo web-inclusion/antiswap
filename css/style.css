@@ -13,9 +13,6 @@ body {
   color: #fff;
   font-size: 14px;
 }
-.header {
-  height: 73px;
-}
 .header__wrap {
   display: flex;
   justify-content: space-between;
@@ -138,11 +135,539 @@ body {
   text-decoration: none;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; 
+  margin-top: 40px;
+}
+.component-icon__wrap {
+  display: flex;
+  margin-top: 140px;
+  margin-bottom: 140px;
+}
+.component-icon__mod {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 16px;
+  border: 1px solid #212122;
+  background: #161617;
+  padding: 16px;
+  /* margin: 16px; */
+  background-repeat: no-repeat;
+  background-position: 16px 16px;
+  width: 48px;
+  height: 48px;
+}
+.component-icon__mod + .component-icon__mod {
+  margin-left: 16px;
+}
+.component-icon__mod::nth-child(1) {
+  margin-left: -24px;
+}
+.component-icon__mod-0 {
+  background-image: url(../images/сomponent0.svg);
+}
+.component-icon__mod-1 {
+  background-image: url(../images/сomponent1.svg);
+}
+.component-icon__mod-2 {
+  background-image: url(../images/сomponent2.svg);
+}
+.component-icon__mod-3 {
+  background-image: url(../images/сomponent3.svg);
+}
+.component-icon__mod-4 {
+  background-image: url(../images/сomponent4.svg);
+}
+.component-icon__mod-5 {
+  background-image: url(../images/сomponent5.svg);
+}
+.component-icon__mod-6 {
+  background-image: url(../images/сomponent6.svg);
+}
+.component-icon__mod-7 {
+  background-image: url(../images/сomponent7.svg);
+}
+.component-icon__mod-8 {
+  background-image: url(../images/сomponent8.svg);
+}
+.component-icon__mod-9{
+  background-image: url(../images/сomponent9.svg);
+}
+
+
+/* advantages-block */
+
+.advantages-block {
+  margin-bottom: 60px;
+}
+.advantages__paragraph {
+  color: var(--Text-Accent-Secondary, #536EFF);
+  font-family: "Nunito Sans";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; 
+}
+.advantages__head {
+  color: var(--Text-Primary, #FFF);
+  font-family: "Nunito Sans";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 68px; /* 136% */
+  letter-spacing: -0.5px;
+  margin-top: 8px;
+  margin-bottom: 60px;
+}
+.advantages__wrap {
+  display: flex;
+}
+.advantages__open {
+  background-image: url(../images/advanages-fon.jpg);
+  background-repeat: no-repeat;
+}
+.advantages__block-img {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.advantages__block-img::after {
+  content: "";
+  position: absolute;
+  width: 193.486px;
+  height: 171.81px;
+  transform: rotate(2deg);
+  flex-shrink: 0;
+  background-image: url(../images/podarok.png);
+  background-repeat: no-repeat;
+  bottom: -31px;
+  right: 98px;
+  z-index: 2;
+}
+.advantages__img {
+  position: relative;
+  z-index: 1;
+}
+.advantages__block-text {
+  width: 50%;
+  padding: 78px 64px 0 94px;
+}
+.advantages__block-head {
+  color: var(--Text-Primary, #FFF);
+  /* Headline/H4 */
+  font-family: "Nunito Sans";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 38px; /* 126.667% */
+  margin-bottom: 16px;
+}
+.advantages__block-span {
+  color: #6A82FF;
+}
+.advantages__block-paragr {
+  color: var(--Text-Tertiary, #86868B);
+  /* Paragraph/P2 */
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 155.556% */
+  margin-bottom: 24px;
+}
+.advantages__block-butt {
+  display: flex;
+  min-width: 220px;
+  padding:  12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background:  #3B5AFF;
+  border: 0;
+  color: #fff;
   /* Paragraph/P3 */
   font-family: "Nunito Sans";
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 24px; /* 150% */
-  margin-top: 40px;
+  text-decoration: none;
+  width: 220px;
+}
+
+/* money-blockW */
+
+.money-block__wrap {
+  display: flex;
+  background-image: url(../images/advanages-fon.jpg);
+  background-repeat: no-repeat;
+}
+.money-block__left {
+  width: 50%;
+  padding-top: 115px;
+  padding-left: 64px;
+}
+.money-block__head {
+  color: var(--Text-Primary, #FFF);
+  /* Headline/H4 */
+  font-family: "Nunito Sans";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 38px; /* 126.667% */
+}
+.money-block__span {
+  color: #6A82FF;
+
+}
+.money-block__paragraph {
+  color: #86868B;
+  /* Paragraph/P2 */
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 155.556% */
+  width: 528px;
+  margin-top: 16px;
+}
+.money-block__right {
+  width: 50%;
+  position: relative;
+  z-index: 1;
+}
+.money-block__right::after {
+  content: "";
+  width: 217.815px;
+  height: 217.869px;
+  transform: rotate(15.072deg);
+  flex-shrink: 0;
+  background-image: url(../images/shit.png);
+  position: absolute;
+  top: 0;
+  right: 33px;
+  z-index: 2;
+}
+
+/* add-functions */
+
+.add-functions {
+  margin-top: 140px;
+  margin-bottom: 140px;
+}
+.add-functions__wrap {
+  display: flex;
+  padding: 36px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  border-radius: var(--Radius-16px, 16px);
+  background: rgba(59, 90, 255, 0.15);
+  min-height: 110px;
+}
+.add-functions__left {
+  width: 75%;
+}
+.add-functions__head {
+  color: #6A82FF;
+  font-family: "Nunito Sans";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 38px; 
+  position: relative;
+  margin-left: 52px;
+}
+.add-functions__head::after {
+  content: "";
+  height: 36px;
+  width: 36px;
+  background-image: url(../images/settings.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -52px;
+}
+.add-functions__paragraph {
+  color: #6A82FF;
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; 
+  max-width: 907px;
+  margin-top: 16px;
+}
+.add-functions__right {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+}
+.add-functions__link {
+  display: flex;
+  width: 250px;
+  min-width: 220px;
+  padding: var(--Spaceing-12px, 12px) var(--Spaceing-16px, 16px);
+  justify-content: center;
+  align-items: center;
+  gap: var(--Spaceing-8px, 8px);
+  border-radius: var(--Spaceing-8px, 8px);
+  background: var(--Buttons-Primary, #3B5AFF);
+  color: #fff;
+  text-decoration: none;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+}
+
+/* format-obmen */
+
+.format-obmen__paragraph {
+  color: #536EFF;
+  font-family: "Nunito Sans";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; 
+}
+.format-obmen__head {
+  color: #FFF;
+  font-family: "Nunito Sans";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 68px; 
+  letter-spacing: -0.5px;
+  margin-bottom: 90px;
+}
+.format-obmen__wrap {
+  display: flex;
+}
+.format-obmen__left {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  background-image: url(../images/exchange-fon.png);
+  background-repeat: no-repeat;
+}
+.format-obmen__img {
+  margin-top: 29px;
+}
+.format-obmen__right {
+  width: 50%;
+  margin-top: 143px;
+  margin-left: 60px;
+}
+.format-obmen__block-head {
+  color: var(--Text-Primary, #FFF);
+  /* Headline/H4 */
+  font-family: "Nunito Sans";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 38px; /* 126.667% */
+}
+.format-obmen__block-paragr {
+  color: #B1B1B9;
+  /* Paragraph/P2 */
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 155.556% */
+  margin-top: 16px; 
+}
+.format-obmen__link {
+  overflow: hidden;
+  color: #FFF;
+  text-overflow: ellipsis;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+  display: flex;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 220px;
+  border-radius: 8px;
+  background: #3B5AFF;
+  text-decoration: none;
+  margin-top: 24px;
+}
+
+
+.kurs-obmen {
+  margin-top: 60px;
+}
+.container {
+}
+.kurs-obmen__wrap {
+  display: flex;
+}
+.kurs-obmen__left {
+  width: 45%;
+  padding-top: 156px;
+  padding-right: 43px;
+}
+.kurs-obmen__head {
+  color: var(--Text-Primary, #FFF);
+  /* Headline/H4 */
+  font-family: "Nunito Sans";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 38px; /* 126.667% */
+}
+.kurs-obmen__paragraph {
+  color: var(--Text-Secondary, #B1B1B9);
+  /* Paragraph/P2 */
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 155.556% */
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.kurs-obmen__group-butt {
+  display: flex;
+  gap: 12px;
+}
+.kurs-obmen__anonim {
+  width: 94px;
+  height: 18px;
+  display: flex;
+  padding: var(--Spaceing-6px, 6px) var(--Spaceing-8px, 8px);
+  align-items: center;
+  gap: var(--Spaceing-6px, 6px);
+  color: var(--Text-Tertiary, #86868B);
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 128.571% */
+  border-radius: var(--Spaceing-8px, 8px);
+  background: var(--Font-Black, #262626);
+  padding-left: 32px;
+  position: relative;
+}
+.kurs-obmen__anonim::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-image: url(../images/anonymous-icon.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 6px;
+  left: 8px;
+}
+.kurs-obmen__aml {
+  width: 151px;
+  display: flex;
+  padding: var(--Spaceing-6px, 6px) var(--Spaceing-8px, 8px);
+  align-items: center;
+  gap: var(--Spaceing-6px, 6px);
+  border-radius: var(--Spaceing-8px, 8px);
+  background: #202F40;
+  color: #2E8EFF;
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; 
+  padding-left: 32px;
+  position: relative;
+}
+.kurs-obmen__aml::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-image: url(../images/security-safe.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 6px;
+  left: 8px;
+}
+.kurs-obmen__antiswap {
+  display: flex;
+  padding: var(--Spaceing-6px, 6px) var(--Spaceing-8px, 8px);
+  gap: var(--Spaceing-6px, 6px);
+  border-radius: var(--Spaceing-8px, 8px);
+  color: var(--Icons-Active-Secondary, #536EFF);
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 128.571% */
+  background-color: #202F40;
+  width: 130px;
+  padding-left: 32px;
+  position: relative;
+}
+.kurs-obmen__antiswap::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-image: url(../images/bitcoin-convert.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 6px;
+  left: 8px;
+}
+.kurs-obmen__right {
+  background-image: url(../images/kurs-obmena-fon.jpg);
+  background-repeat: no-repeat;
+  width: 55%;
+  padding-top: 52px;
+  padding-left: 47px;
+}
+
+/* principles */
+.principles {
+  margin-top: 140px;
+  margin-bottom: 140px;
+}
+.principles__paragraph {
+  color: var(--Text-Accent-Secondary, #536EFF);
+  /* Paragraph/P1 */
+  font-family: "Nunito Sans";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; /* 145.455% */
+}
+.principles__head {
+}
+.principles__wrap {
+}
+.principles__left {
+}
+.principles__left-img {
+}
+.principles__left-head {
+}
+.principles__left-paragr {
+}
+.principles__right {
+}
+.principles__right-img {
+}
+.principles__right-head {
+}
+.principles__right-paragr {
 }
