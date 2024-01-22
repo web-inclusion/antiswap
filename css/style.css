@@ -840,3 +840,15 @@ body {
   line-height: 18px; /* 128.571% */
   text-decoration: none;
 }
+
+/* End landing-page */
+
+/* Sign-up-exchange - page */
+.wrapper-modal {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/backgroung-sing-up.jpg);
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.3;
+}
