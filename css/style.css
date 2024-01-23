@@ -24,6 +24,8 @@ body {
   width: 170px;
   height: 22px;
   gap: 10px;
+  position: relative;
+  z-index: 3;
 }
 .logo__link {
   color: #FFF;
@@ -632,9 +634,12 @@ body {
 .kurs-obmen__right {
   background-image: url(../images/kurs-obmena-fon.jpg);
   background-repeat: no-repeat;
+  background-position: 100% 0%;
   width: 55%;
   padding-top: 52px;
   padding-left: 47px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* principles */
@@ -844,11 +849,292 @@ body {
 /* End landing-page */
 
 /* Sign-up-exchange - page */
-.wrapper-modal {
+.wrapper-backgroung {
   width: 100%;
   height: 100vh;
   background-image: url(../images/backgroung-sing-up.jpg);
-  background-position: center center;
+  background-position: 0 0;
   background-size: cover;
   opacity: 0.3;
+  position: absolute;
+  z-index: 1;
+}
+.modal-header {
+  height: 68px;
+  padding-left: 50px;
+  display: flex;
+  align-items: end;
+  position: absolute;
+}
+.modal-window {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.premodal-window {
+}
+.modal-window__wrap {
+  padding: 36px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 530px;
+  border-radius: 16px;
+  background: #161617;
+  box-shadow: 0px 72px 132px 0px rgba(5, 29, 61, 0.06);
+}
+.modal-window__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.modal-window__title {
+  color: var(--Text-Primary, #FFF);
+  /* Headline/H4 */
+  font-family: "Nunito Sans";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 38px; /* 126.667% */
+}
+.modal-window__login-link {
+  min-width: 70px;
+  display: block;
+  overflow: hidden;
+  color: var(--Text-Accent-Secondary, #536EFF);
+  text-overflow: ellipsis;
+  /* Paragraph/P3 */
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+  text-decoration: none;
+  position: relative;
+  text-align: right;
+}
+.modal-window__login-link::after{
+  position: absolute;
+  left: 0px;
+  top: 4px;
+  content: "";
+  background-image: url(../images/arrow-swap-horizontal.svg);
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  z-index: 5;
+}
+.sign-up__form {
+  margin-top: 40px;
+  box-sizing: border-box;
+}
+.sign-up__name-obmen {
+  border-radius: 8px;
+  border: 1px solid #39393B;
+  background-color: transparent;
+  display: block;
+  height: 48px;
+  align-items: center;
+  max-width: 100%;
+  overflow: hidden;
+  color: #86868B;
+  /* Paragraph/P3 */
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+  padding: 0 16px;
+  width: 100%;
+}
+.sign-up__name-text {
+  color: #86868B;
+  font-family: "Nunito Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 150% */
+  margin-top: 6px;
+}
+.sign-up__login {
+  margin-top: 24px;
+  border-radius: 8px;
+  border: 1px solid #39393B;
+  background-color: transparent;
+  display: flex;
+  height: 48px;
+  padding: 12px 16px;
+  align-items: center;
+  gap: 6px;
+  align-self: stretch;
+  width: 100%;
+  overflow: hidden;
+  color: #86868B;
+  /* Paragraph/P3 */
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+}
+.sign-up__login-text {
+  color: #86868B;
+  /* Caption/C2 */
+  font-family: "Nunito Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 150% */
+  margin-top: 6px;
+}
+.sign-up__email {
+  margin-top: 24px;
+  border-radius: 8px;
+  border: 1px solid #FF4646;
+  display: flex;
+  padding: 12px 16px;
+  align-items: center;
+  gap: 6px;
+  align-self: stretch;
+  color: #FFF;
+  text-overflow: ellipsis;
+  /* Paragraph/P3 */
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+  background-color: transparent;
+  width: 100%;
+}
+.sign-up__email-text {
+  color: var(--Imputs-Primary-Error, #FF4646);
+  /* Caption/C2 */
+  font-family: "Nunito Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 150% */
+}
+.sign-up__name-pass {
+  display: flex;
+  height: 48px;
+  padding: 12px 16px;
+  align-items: center;
+  gap: 6px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid #39393B;
+  width: 100%;
+  background-color: transparent;
+  margin-top: 24px;
+  overflow: hidden;
+  color: #86868B;
+  text-overflow: ellipsis;
+  /* Paragraph/P3 */
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+}
+.sign-up__group {
+  margin-top: 24px;
+}
+.sign-up__checkbox {
+
+}
+.sign-up__check-label {
+  color: var(--Text-Tertiary, #86868B);
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
+}
+.sign-up__button {
+  margin-top: 24px;
+  border-radius: var(--Spaceing-8px, 8px);
+  background: var(--Buttons-Primary, #3B5AFF);
+  border: 0;
+  display: flex;
+  min-width: 220px;
+  width: 100%;
+  padding: var(--Spaceing-12px, 12px) var(--Spaceing-16px, 16px);
+  justify-content: center;
+  align-items: center;
+  gap: var(--Spaceing-8px, 8px);
+  align-self: stretch;
+  overflow: hidden;
+  color: var(--Text-Primary, #FFF);
+  text-overflow: ellipsis;
+  /* Paragraph/P3 */
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+}
+.modal-window__registr-now {
+  border-top: 1px solid #39393B;
+  display: block;
+  width: 100%;
+  margin-top: 32px;
+}
+.modal-window__registr-paragr {
+  color: #86868B;
+  text-align: center;
+  /* Paragraph/P4 */
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 128.571% */
+  width: 202px;
+  margin: 0 auto;
+  color: #86868B;
+  text-align: center;
+  /* Paragraph/P4 */
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 128.571% */
+  background-color: #161617;
+  margin-top: -10px;
+  padding: 0 10px;
+}
+.modal-window__registr-link {
+  color: #B1B1B9;
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  text-decoration-line: underline;
+}
+.modal-window__login-telegram {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  padding: 12px 13px 12px 11px;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/sign-up-telegram.svg);
+  border-radius: 200px;
+  background-color: #2AABEE; /*#229ED9  */
+  background-repeat: no-repeat;
+  background-position:  43% 50%;
+  justify-content: center;
+  margin-top: 16px;
+}
+.modal-window__pretelegram {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }

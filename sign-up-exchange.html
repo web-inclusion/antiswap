@@ -14,14 +14,43 @@
   <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
-  <div class="wrapper-modal">
-    <div class="modal-toppanel">
-      <div class="logo footer__logo">
-        <a href="#" class="logo__link">Antiswap</a>
-        <span class="logo__p2p"></span>
+  <div class="wrapper-backgroung">
+  </div>
+  <div class="modal-header">
+    <div class="logo footer__logo">
+      <a href="#" class="logo__link">Antiswap</a>
+      <span class="logo__p2p"></span>
+    </div>
+  </div>
+  <div class="modal-window">
+    <div class="premodal-window">
+      <div class="modal-window__wrap">
+        <div class="modal-window__header">
+          <h3 class="modal-window__title">Зарегистрироваться</h3>
+          <a href="#" class="modal-window__login-link">Войти</a>
+        </div>
+        <form class="sign-up__form" action="#">
+          <input type="text" name="name" class="sign-up__name-obmen" placeholder="Название обменника">
+          <p class="sign-up__name-text">За использование названий существующих популярных обменников – бан</p>
+          <input type="text" name="login" class="sign-up__login" placeholder="Логин">
+          <p class="sign-up__login-text">Ваш логин будет использоваться в качестве ссылки на обменник в формате: http://yourname.antiswap.info</p>
+          <input type="text" name="email" class="sign-up__email" placeholder="E-mail">
+          <p class="sign-up__email-text">Пожалуйста, введите свой адрес электронной почты в формате name@example.com</p>
+          <input type="password" name="password" class="sign-up__name-pass" placeholder="Пароль">
+          <div class="sign-up__group">
+            <input class="sign-up__checkbox" name="checkbox" type="checkbox" id="checklabel">
+            <label class="sign-up__check-label" for="checklabel">Создавая аккаунт, я <a class="modal-window__registr-link" href="#">принимаю условия пользовательского соглашения</a> и  <a class="modal-window__registr-link" href="#">политики конфиденциальности</a></label>
+          </div>
+            <button class="sign-up__button" type="submit">Создать аккаунт</button>
+        </form>
+        <div class="modal-window__registr-now">
+          <p class="modal-window__registr-paragr">Или зарегистрируйтесь через</p>
+        </div>
+        <div class="modal-window__pretelegram">
+          <a href="#" class="modal-window__login-telegram"></a>
+        </div>
       </div>
     </div>
-    
   </div>
   <script src="js/main.js"></script>
 </body>
