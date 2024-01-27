@@ -1333,6 +1333,7 @@ main.content-main {
 }
 .content-desktop__right {
   min-height: 200px;
+  margin-bottom: 60px;
 }
 .left-panel__head {
   margin: 10px 0 40px;
@@ -1510,6 +1511,8 @@ main.content-main {
   font-weight: 600;
   color: #86868B;
   text-decoration: none;
+  background-color: transparent;
+  border: 0;
 }
 .exchange__item-count {
   /* position: absolute;
@@ -1525,7 +1528,7 @@ main.content-main {
   margin-top: 2px;
   margin-left: 6px;
 }
-.active-exchange-link {
+.active-exchange-link, .tab-btn-active {
   color: #536EFF;
 }
 .active-exchange-bg {
@@ -1541,6 +1544,8 @@ main.content-main {
   border-radius: 16px;
   background-color: #161617;
   padding: 16px;
+  display: flex;
+  justify-content: space-between;
 }
 .exchange__action {
   font-family: "Nunito Sans";
@@ -1549,10 +1554,21 @@ main.content-main {
   font-weight: 700;
   padding-left: 32px;
   margin: 24px 0;
+  position: relative;
+}
+.exchange__action::before {
+  content:"";
+  position: absolute;
+  background-image: url(../images/lightning.svg);
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 20px;
+  top: 6px;
+  left: 7px;
 }
 
 .exchange__group-left {
-  width: 300px;
+  width: 320px;
 }
 .exchange__group-top {
   display: flex;
@@ -1575,6 +1591,10 @@ main.content-main {
 }
 .exchange__group-right {
   width: 208px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: flex-end;
 }
 .exchange__number-id {
   font-family: "Nunito Sans";
@@ -1608,4 +1628,217 @@ main.content-main {
   top: 4px;
   width: 18px;
   height: 18px;
+}
+.exchange__label-link {
+  width: 208px;
+  height: 32px;
+  padding: 4px 8px 4px 32px;
+  background: linear-gradient(180deg, rgba(46, 142, 255, 0.15) 0%, rgba(46, 142, 255, 0.00) 100%);
+  line-height: 32px;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #2E8EFF;
+  display: block;
+}
+.exchange__label-link::before {
+  content: "";
+  background-image: url(../images/card-edit.svg);
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 6px;
+  left: 9px;
+}
+.exchange__label-appeal {
+  width: auto;
+  height: 32px;
+  padding: 4px 8px 4px 32px;
+  background: rgba(255, 70, 70, 0.15);
+  line-height: 24px;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #FF4646;
+  display: block;
+}
+.exchange__label-appeal::before {
+  content: "";
+  background-image: url(../images/appeal.svg);
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 6px;
+  left: 9px;
+}
+.exchange__label-requisites {
+  width: auto;
+  height: 32px;
+  padding: 4px 8px 4px 32px;
+  background: rgba(134, 134, 139, 0.15);
+  line-height: 24px;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #B1B1B9;
+  display: block;
+}
+.exchange__label-requisites::before {
+  content: "";
+  background-image: url(../images/card-edit-green.svg);
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 6px;
+  left: 9px;
+}
+.exchange__comment-link {
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #D0B1B1;
+  text-decoration: none;
+  padding-left: 30px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+}
+.exchange__comment-span__active {
+  background-image: url(../images/icon-message-active.svg);
+  background-repeat: no-repeat;
+  margin: 2px 6px 2px;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+.exchange__comment-span {
+  background-image: url(../images/icon-message.svg);
+  background-repeat: no-repeat;
+  margin: 2px 6px 2px;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+.exchange-field + .exchange-field {
+  margin-top: 16px;
+}
+
+.tab-pane:not(.tab-pane-show) {
+  display: none;
+}
+
+.exchange__action-time {
+  font-family: "Nunito Sans";
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 700;
+  padding-left: 40px;
+  margin: 24px 0;
+  position: relative;
+}
+.exchange__action-time::before {
+  content:"";
+  position: absolute;
+  background-image: url(../images/card-coin.svg);
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  top: 6px;
+  left: 7px;
+}
+.header-exchange {
+  margin: 80px 0 40px 0;
+  font-family: "Nunito Sans";
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: 700;
+}
+.block-exchange {
+  display: grid;
+  grid-template-columns: 65% 33.4%;
+  column-gap: 20px;
+}
+.block-exchange__left {
+  background-color: #161617;
+  border-radius: 24px;
+}
+.block-exchange__right {
+  background-color: #161617;
+  border-radius: 24px;
+}
+
+.block-exchange__header {
+  display: flex;
+  justify-content: space-between;
+  height: 136px;
+  margin-bottom: 16px;
+  padding: 24px;
+  border-bottom: 1px solid #262628;
+}
+.block-exchange__header-left {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.block-exchange__left-head {
+  font-family: "Nunito Sans";
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 700;
+}
+.block-exchange__label-link {
+  width: 208px;
+  height: 32px;
+  padding: 4px 8px 4px 32px;
+  background: rgba(46, 142, 255, 0.25);
+  line-height: 24px;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #2E8EFF;
+  display: block;
+  margin-top: 8px;
+}
+.block-exchange__label-link::before {
+  content: "";
+  background-image: url(../images/card-edit.svg);
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 6px;
+  left: 9px;
+}
+.block-exchange__header-link {
+  width: 176px;
+  height: 34px;
+  color: #FF4646;
+  border: 1px solid #FF4646;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 6px;
+  line-height: 18px;
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  font-weight: 600;
 }

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Landing Page</title>
+  <title>Main Desktop</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -99,35 +99,278 @@
               <a href="#" class="left-panel__logout-link">Выйти из аккаунта</a>
             </div>
           </div>
-          <div class="content-desktop__right">
+          <div class="content-desktop__right tab" id="tab-1">
             <h3 class="exchange__head">Обмены</h3>
-            <ul class="exchange__list">
+            <ul class="exchange__list tab-nav">
               <li class="exchange__item active-exchange-border">
-                <a href="#" class="exchange__item-link active-exchange-link">Активных</a>
+                <button type="button" class="tab-btn exchange__item-link tab-btn-active" data-target-id="0">Активных</button>
                 <span class="exchange__item-count active-exchange-bg">12</span>
               </li>
               <li class="exchange__item">
-                <a href="#" class="exchange__item-link">Завершенных</a>
+                <button type="button" class="tab-btn exchange__item-link" data-target-id="1">Завершенных</button>
                 <span class="exchange__item-count">0</span>
               </li>
             </ul>
             <h3 class="exchange__action">Ожидают ваших действий</h3>
-            <div class="exchange-field">
-              <div class="exchange__group-left">
-                <div class="exchange__group-top">
-                  <div class="exchange__group-one"><span>U</span></div>
-                  <div class="exchange__group-two">
-                    <p class="exchange__number-id">№155662</p>
-                    <p class="exchange__user">User name</p>
+            <div class="tab-content">
+              <div class="tab-pane tab-pane-show" data-id="0">
+                <div class="exchange-field">
+                  <div class="exchange__group-left">
+                    <div class="exchange__group-top">
+                      <div class="exchange__group-one"><span>U</span></div>
+                      <div class="exchange__group-two">
+                        <p class="exchange__number-id">№155662</p>
+                        <p class="exchange__user">User name 1</p>
+                      </div>
+                    </div>
+                    <div class="exchange__group-bottom">
+                      <span class="exchange__group-span">1 XMR</span>
+                      <span class="exchange__group-span">20 LTC</span>
+                    </div>
+                  </div>
+                  <div class="exchange__group-right">
+                    <a href="#" class="exchange__label-link">Отправьте реквизиты</a>
+                    <a href="#" class="exchange__comment-link">
+                      <span class="exchange__comment-span__active"></span>
+                      15</a>
                   </div>
                 </div>
-                <div class="exchange__group-bottom">
-                  <span class="exchange__group-span">1 XMR</span>
-                  <span class="exchange__group-span">20 LTC</span>
+                <div class="exchange-field">
+                  <div class="exchange__group-left">
+                    <div class="exchange__group-top">
+                      <div class="exchange__group-one"><span>U</span></div>
+                      <div class="exchange__group-two">
+                        <p class="exchange__number-id">№155662</p>
+                        <p class="exchange__user">User name 2</p>
+                      </div>
+                    </div>
+                    <div class="exchange__group-bottom">
+                      <span class="exchange__group-span">1 XMR</span>
+                      <span class="exchange__group-span">20 LTC</span>
+                    </div>
+                  </div>
+                  <div class="exchange__group-right">
+                    <a href="#" class="exchange__label-appeal">Апелляция</a>
+                    <a href="#" class="exchange__comment-link">
+                      <span class="exchange__comment-span"></span>
+                      15</a>
+                  </div>
+                </div>
+                <div class="exchange-field">
+                  <div class="exchange__group-left">
+                    <div class="exchange__group-top">
+                      <div class="exchange__group-one"><span>U</span></div>
+                      <div class="exchange__group-two">
+                        <p class="exchange__number-id">№155662</p>
+                        <p class="exchange__user">User name 1</p>
+                      </div>
+                    </div>
+                    <div class="exchange__group-bottom">
+                      <span class="exchange__group-span">1 XMR</span>
+                      <span class="exchange__group-span">20 LTC</span>
+                    </div>
+                  </div>
+                  <div class="exchange__group-right">
+                    <a href="#" class="exchange__label-requisites">Ожидаете реквизиты</a>
+                    <a href="#" class="exchange__comment-link">
+                      <span class="exchange__comment-span__active"></span>
+                      15</a>
+                  </div>
+                </div>
+                <h3 class="exchange__action-time">Открытые обмены</h3>
+                <div class="exchange-field">
+                  <div class="exchange__group-left">
+                    <div class="exchange__group-top">
+                      <div class="exchange__group-one"><span>U</span></div>
+                      <div class="exchange__group-two">
+                        <p class="exchange__number-id">№155662</p>
+                        <p class="exchange__user">User name 2</p>
+                      </div>
+                    </div>
+                    <div class="exchange__group-bottom">
+                      <span class="exchange__group-span">1 XMR</span>
+                      <span class="exchange__group-span">20 LTC</span>
+                    </div>
+                  </div>
+                  <div class="exchange__group-right">
+                    <a href="#" class="exchange__label-link">Отправьте реквизиты</a>
+                    <a href="#" class="exchange__comment-link">
+                      <span class="exchange__comment-span"></span>
+                      15</a>
+                  </div>
+                </div>
+                <div class="exchange-field">
+                  <div class="exchange__group-left">
+                    <div class="exchange__group-top">
+                      <div class="exchange__group-one"><span>U</span></div>
+                      <div class="exchange__group-two">
+                        <p class="exchange__number-id">№155662</p>
+                        <p class="exchange__user">User name 1</p>
+                      </div>
+                    </div>
+                    <div class="exchange__group-bottom">
+                      <span class="exchange__group-span">1 XMR</span>
+                      <span class="exchange__group-span">20 LTC</span>
+                    </div>
+                  </div>
+                  <div class="exchange__group-right">
+                    <a href="#" class="exchange__label-appeal">Апелляция</a>
+                    <a href="#" class="exchange__comment-link">
+                      <span class="exchange__comment-span__active"></span>
+                      15</a>
+                  </div>
+                </div>
+                <div class="exchange-field">
+                  <div class="exchange__group-left">
+                    <div class="exchange__group-top">
+                      <div class="exchange__group-one"><span>U</span></div>
+                      <div class="exchange__group-two">
+                        <p class="exchange__number-id">№155662</p>
+                        <p class="exchange__user">User name 2</p>
+                      </div>
+                    </div>
+                    <div class="exchange__group-bottom">
+                      <span class="exchange__group-span">1 XMR</span>
+                      <span class="exchange__group-span">20 LTC</span>
+                    </div>
+                  </div>
+                  <div class="exchange__group-right">
+                    <a href="#" class="exchange__label-link">Отправьте реквизиты</a>
+                    <a href="#" class="exchange__comment-link">
+                      <span class="exchange__comment-span"></span>
+                      15</a>
+                  </div>
                 </div>
               </div>
-              <div class="exchange__group-right"></div>
-            </div>
+              <div class="tab-pane" data-id="1">
+                <div class="exchange-field">
+                  <div class="exchange__group-left">
+                    <div class="exchange__group-top">
+                      <div class="exchange__group-one"><span>U</span></div>
+                      <div class="exchange__group-two">
+                        <p class="exchange__number-id">№155662</p>
+                        <p class="exchange__user">User name 3</p>
+                      </div>
+                    </div>
+                    <div class="exchange__group-bottom">
+                      <span class="exchange__group-span">1 XMR</span>
+                      <span class="exchange__group-span">20 LTC</span>
+                    </div>
+                  </div>
+                  <div class="exchange__group-right">
+                    <a href="#" class="exchange__label-requisites">Ожидаете реквизиты</a>
+                    <a href="#" class="exchange__comment-link">
+                      <span class="exchange__comment-span__active"></span>
+                      15</a>
+                  </div>
+                </div>
+                <div class="exchange-field">
+                  <div class="exchange__group-left">
+                    <div class="exchange__group-top">
+                      <div class="exchange__group-one"><span>U</span></div>
+                      <div class="exchange__group-two">
+                        <p class="exchange__number-id">№155662</p>
+                        <p class="exchange__user">User name 4</p>
+                      </div>
+                    </div>
+                    <div class="exchange__group-bottom">
+                      <span class="exchange__group-span">1 XMR</span>
+                      <span class="exchange__group-span">20 LTC</span>
+                    </div>
+                  </div>
+                  <div class="exchange__group-right">
+                    <a href="#" class="exchange__label-appeal">Апелляция</a>
+                    <a href="#" class="exchange__comment-link">
+                      <span class="exchange__comment-span"></span>
+                      15</a>
+                  </div>
+                </div>
+                <div class="exchange-field">
+                  <div class="exchange__group-left">
+                    <div class="exchange__group-top">
+                      <div class="exchange__group-one"><span>U</span></div>
+                      <div class="exchange__group-two">
+                        <p class="exchange__number-id">№155662</p>
+                        <p class="exchange__user">User name 3</p>
+                      </div>
+                    </div>
+                    <div class="exchange__group-bottom">
+                      <span class="exchange__group-span">1 XMR</span>
+                      <span class="exchange__group-span">20 LTC</span>
+                    </div>
+                  </div>
+                  <div class="exchange__group-right">
+                    <a href="#" class="exchange__label-link">Отправьте реквизиты</a>
+                    <a href="#" class="exchange__comment-link">
+                      <span class="exchange__comment-span__active"></span>
+                      15</a>
+                  </div>
+                </div>
+                <div class="exchange-field">
+                  <div class="exchange__group-left">
+                    <div class="exchange__group-top">
+                      <div class="exchange__group-one"><span>U</span></div>
+                      <div class="exchange__group-two">
+                        <p class="exchange__number-id">№155662</p>
+                        <p class="exchange__user">User name 4</p>
+                      </div>
+                    </div>
+                    <div class="exchange__group-bottom">
+                      <span class="exchange__group-span">1 XMR</span>
+                      <span class="exchange__group-span">20 LTC</span>
+                    </div>
+                  </div>
+                  <div class="exchange__group-right">
+                    <a href="#" class="exchange__label-link">Отправьте реквизиты</a>
+                    <a href="#" class="exchange__comment-link">
+                      <span class="exchange__comment-span"></span>
+                      15</a>
+                  </div>
+                </div>
+                <div class="exchange-field">
+                  <div class="exchange__group-left">
+                    <div class="exchange__group-top">
+                      <div class="exchange__group-one"><span>U</span></div>
+                      <div class="exchange__group-two">
+                        <p class="exchange__number-id">№155662</p>
+                        <p class="exchange__user">User name 3</p>
+                      </div>
+                    </div>
+                    <div class="exchange__group-bottom">
+                      <span class="exchange__group-span">1 XMR</span>
+                      <span class="exchange__group-span">20 LTC</span>
+                    </div>
+                  </div>
+                  <div class="exchange__group-right">
+                    <a href="#" class="exchange__label-requisites">Ожидаете реквизиты</a>
+                    <a href="#" class="exchange__comment-link">
+                      <span class="exchange__comment-span__active"></span>
+                      15</a>
+                  </div>
+                </div>
+                <div class="exchange-field">
+                  <div class="exchange__group-left">
+                    <div class="exchange__group-top">
+                      <div class="exchange__group-one"><span>U</span></div>
+                      <div class="exchange__group-two">
+                        <p class="exchange__number-id">№155662</p>
+                        <p class="exchange__user">User name 4</p>
+                      </div>
+                    </div>
+                    <div class="exchange__group-bottom">
+                      <span class="exchange__group-span">1 XMR</span>
+                      <span class="exchange__group-span">20 LTC</span>
+                    </div>
+                  </div>
+                  <div class="exchange__group-right">
+                    <a href="#" class="exchange__label-link">Отправьте реквизиты</a>
+                    <a href="#" class="exchange__comment-link">
+                      <span class="exchange__comment-span"></span>
+                      15</a>
+                  </div>
+                </div>
+              </div>
+            </div>  
           </div>
         </div>
       </div>
