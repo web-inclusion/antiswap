@@ -27,7 +27,7 @@ body {
   flex-shrink: 0;
 }
 main.content-main {
-  flex-grow: 10;
+  flex-grow: 1;
 }
 .header__wrap {
   display: flex;
@@ -1097,7 +1097,7 @@ main.content-main {
   border-radius: 8px;
   border: 1px solid #39393B;
   width: 100%;
-  background-color: transparent;
+  background: #161617;
   margin-top: 24px;
   overflow: hidden;
   color: #86868B;
@@ -1333,7 +1333,6 @@ main.content-main {
 }
 .content-desktop__right {
   min-height: 200px;
-  outline: 1px solid #ccc;
 }
 .left-panel__head {
   margin: 10px 0 40px;
@@ -1439,6 +1438,174 @@ main.content-main {
   height: 60px;
   background: rgba(42, 171, 238, 0.15);
   border-radius: 12px;
-  line-height: 60;
-  color: #2AABEE
+  line-height: 60px;
+  color: #2AABEE;
+  text-decoration: none;
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 77px;
+  position: relative;
+}
+.left-panel__telegram-link::after{
+  content: "";
+  background-image: url(../images/leftpanel-telegram.svg);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 17px;
+  position: absolute;
+  top:21px;
+  left: 39px;
+}
+.left-panel__logout-link {
+  width: 170px;
+  height: 24px;
+  margin: 0 auto;
+  display: block;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 600;
+  color: #FF4646;
+  text-decoration: none;
+  text-align: right;
+  position: relative;
+  line-height: 20px;
+  margin-bottom: 24px;
+}
+.left-panel__logout-link::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-image: url(../images/log-out.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+}
+
+.exchange__head {
+  font-family: "Nunito Sans";
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 38px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+.exchange__list {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0 33px 0 0px;
+}
+.exchange__item {
+  padding-right: 10px;
+  position: relative;
+  height: 35px;
+  display: flex;
+  align-items: flex-start;
+}
+.exchange__item-link {
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #86868B;
+  text-decoration: none;
+}
+.exchange__item-count {
+  /* position: absolute;
+  top: 3px;
+  right: 0px; */
+  padding: 2px 6px;
+  border-radius: 6px;
+  background-color: #86868B;
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  margin-top: 2px;
+  margin-left: 6px;
+}
+.active-exchange-link {
+  color: #536EFF;
+}
+.active-exchange-bg {
+  background-color: #536EFF;
+} 
+.active-exchange-border {
+  border-bottom: 2px solid #536EFF;
+}
+
+.exchange-field {
+  height: 120px;
+  width: 100%;
+  border-radius: 16px;
+  background-color: #161617;
+  padding: 16px;
+}
+.exchange__action {
+  font-family: "Nunito Sans";
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 700;
+  padding-left: 32px;
+  margin: 24px 0;
+}
+
+.exchange__group-left {
+  width: 300px;
+}
+.exchange__group-top {
+  display: flex;
+  gap: 16px;
+}
+.exchange__group-one {
+  padding: 14px 16.5px;
+  border-radius: 48px;
+  background-color: #FF53D9;
+  font-family: "Nunito Sans";
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 600;
+}
+.exchange__group-two {
+}
+.exchange__group-bottom {
+  display: flex;
+  gap: 38px;
+}
+.exchange__group-right {
+  width: 208px;
+}
+.exchange__number-id {
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  color: #86868B;
+}
+.exchange__user {
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #fff;
+}
+.exchange__group-span {
+  margin-top: 12px;
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #fff;
+  position: relative;
+}
+.exchange__group-span + .exchange__group-span::after {
+  content: "";
+  background-image: url(../images/arrow-right.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -28px;
+  top: 4px;
+  width: 18px;
+  height: 18px;
 }
