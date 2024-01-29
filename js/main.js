@@ -22,3 +22,29 @@ document.addEventListener('click', (e) => {
   const elTabBtn = e.target.closest('.tab-btn');
   showTab(elTabBtn);
 });
+
+const deleteBtn = document.getElementById("header__notification");
+const popup = document.getElementById("modal-notification");
+const noBtn = document.getElementById("modal-notification__icon-close");
+const overlay = document.getElementById("overlay");
+
+deleteBtn.addEventListener("click", () => {
+  popup.style.display = "block";
+  overlay.classList.add("show");
+});
+noBtn.addEventListener("click", () => {
+  popup.style.display = "none";
+  overlay.classList.remove("show");
+});
+overlay.addEventListener("click", () => {
+  popup.style.display = "none";
+  overlay.classList.remove("show");
+});
+// yesBtn.addEventListener("click", () => {
+//   popup.style.display = "none";
+//   overlay.classList.add("show");
+// });
+// buyBtn.addEventListener("click", () => {
+//   success.style.display = "none";
+//   overlay.classList.remove("show");
+// });
