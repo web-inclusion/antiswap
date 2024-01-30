@@ -2389,6 +2389,7 @@ main.content-main {
   z-index: 200;
   display: none;
   overflow: hidden;
+  transform: scaleX(1);
 } 
 #overlay.show {
   display: block;
@@ -2427,4 +2428,70 @@ main.content-main {
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+.statistics__from {
+  display: flex;
+  gap: 20px;
+}
+.statistics__title {
+  line-height: 38px;
+  font-family: "Nunito Sans";
+  font-size: 30px;
+  font-weight: 700;
+  margin: 60px 0 40px;
+}
+.statistics__paragraph {
+  line-height: 24px;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.statistics__from-input {
+  width: 310px;
+  height: 48px;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px solid #39393B;
+  padding: 12px 16px;
+  color: #86868B;
+  line-height: 24px;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 600;
+}
+.statistics__from-sub {
+  width: 220px;
+  height: 48px;
+  background-color: #3B5AFF;
+  color: #fff;
+  line-height: 24px;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 8px;
+}
+table * {
+  /* outline: 1px solid #ccc; */
+}
+.statistics__wrap-table {
+  padding: 24px;
+  width: 100%;
+  width: 100%;
+  background-color: #161617;
+  border-radius: 16px;
+}
+table {
+  box-sizing: border-box;
+}
+th {
+  height: 63px;
+
+}
+tr {
+  height: 55px;
 }
