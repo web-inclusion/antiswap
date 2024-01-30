@@ -2475,23 +2475,117 @@ main.content-main {
   border: 0;
   border-radius: 8px;
 }
-table * {
+.statistics__table * {
   /* outline: 1px solid #ccc; */
 }
 .statistics__wrap-table {
-  padding: 24px;
   width: 100%;
   width: 100%;
   background-color: #161617;
   border-radius: 16px;
+  margin-top: 40px;
 }
-table {
+.statistics__table {
   box-sizing: border-box;
+  width: 100%;
+  line-height: 18px;
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  font-weight: 700;
 }
-th {
+.statistics__table * th {
   height: 63px;
-
+  text-align: left;
+  border-bottom: 1px solod #39393B;
+  padding: 20px 20px;
 }
-tr {
+.statistics__table tbody td {
+  height: 54px;
+  text-align: left;
+  line-height: 54px;
+  padding-left: 15px;
+  padding-right: 5px;
+}
+.statistics__table thead tr{
+  border-bottom: 1px solid #39393B;
+}
+.statistics__table * tr {
   height: 55px;
+}
+.statistics__table tbody td:last-child {
+  color: #2EE111;
+}
+.statistics__table-date {
+  width: 178px;
+}
+.statistics__table-views {
+  width: 136px;
+}
+.statistics__table-start {
+  width: 180px;
+}
+.statistics__table-end {
+  width: 220px;
+}
+.statistics__table-money {
+  width: 142px;
+}
+.navigation {
+  min-width: 100px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 46px;
+  height: 48px;
+  margin-top: 40px;
+}
+.navigation__wrap {
+  position: relative;
+}
+.navigation__list {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+}
+.navigation__item {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #262628;
+}
+.navigation__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 48px;
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+}
+.navigation__item__active {
+  background-color: #3B5AFF;
+}
+.navigation__link-before {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-image: url(../images/arrow-left-nav.svg);
+  background-repeat: no-repeat;
+  text-align: center;
+  line-height: 48;
+  left: -48px;
+  top: 12px;
+}
+.navigation__link-after {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-image: url(../images/arrow-right-nav.svg);
+  background-repeat: no-repeat;
+  text-align: center;
+  line-height: 48;
+  right: -72px;
+  top: 12px;
 }
