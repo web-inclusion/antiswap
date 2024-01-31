@@ -14,6 +14,15 @@
   <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
+  <!-- Модальное окно -->
+<div id="modalwin" class="modal">
+  <div class="modal__content">
+    <button id="modal__close" class="modal__close-button"><img src="./img/close.svg" width="18" alt=""></button>
+    <!-- Контент модального окна -->
+    <h1 class="modal__title">Контент для примера</h1>
+    <p class="modal__descruption">Статья с уроком - <a href="/kak-sdelat-modalnoe-okno-na-sajte.html">тут</a>.</p>
+  </div>
+</div>
   <div class="wrapper">
     <header class="header top__line">
       <div class="container">
@@ -99,8 +108,159 @@
               <a href="#" class="left-panel__logout-link">Выйти из аккаунта</a>
             </div>
           </div>
-          <div class="content-desktop__right>
-             
+          <div class="content-desktop__right">
+            <div class="my-active">
+              <div class="active-head">
+                <h3 class="active-head__title">Депозит</h3>
+                <div class="my-active__block">
+                  <div class="my-active__top">
+                    <h4 class="my-active__title">Мои активы</h4>
+                    <div class="my-active__wallet">
+                      <p class="my-active__wallet-title">Кошелек для пополненя</p>
+                      <p class="my-active__wallet-number">1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2</p> 
+                    </div>
+                  </div>
+                  <div class="my-active__middle">
+                    <div class="my-active__all-active">
+                      <div class="my-active__group">
+                        <h5 class="my-active__title-all">Всего активов</h5>
+                        <a href="#" id="callback-button" class="my-active__conclusion">Вывести</a>
+                      </div>
+                      <div class="my-active__group-sum">
+                        <div class="my-active__wallet-cash">$266,025.00</div>
+                        <div class="my-active__cash-btc">~0,04209461 BTC</div>
+                      </div>
+                    </div>
+                    <div class="my-active__frozen">
+                      <div class="my-active__group">
+                        <h5 class="my-active__title-all">Всего активов</h5>
+                      </div>
+                      <div class="my-active__group-sum">
+                        <div class="my-active__wallet-cash">$16,025.00</div>
+                        <div class="my-active__cash-btc">~0,04209461 BTC</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="my-active__bottom">
+                    <img src="images/money-text.png" class="my-active__img" alt="">
+                    <p class="my-active__text">Депозит представляет собой средства, которые вы вносите на свой счет в системе обмена. Это может быть сумма криптовалюты или традиционной валюты, которую вы готовы использовать для проведения торговых операций на платформе AntiSwap P2P. </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hist-deposit">
+              <div class="hist-deposit__wrap">
+                <h4 class="hist-deposit__title">История операций по депозиту</h4>
+
+                <table class="hist-deposit__table">
+                  <thead>
+                    <tr>
+                      <th class="hist-deposit__table-date">Дата</th>
+                      <th class="hist-deposit__table-views">Сумма ($USD)</th>
+                      <th class="hist-deposit__table-start">Комментарий</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="hist-deposit__td-date">05.04.2023, 16:48</td>
+                      <td class="hist-deposit__td-views">$ 265,265,000.00</td>
+                      <td class="hist-deposit__td-comment">15 нужно вывести и забыть на совсем валюту, которую я сюда завел</td>
+                    </tr>
+                    <tr>
+                      <td class="hist-deposit__td-date">05.04.2023, 16:48</td>
+                      <td class="hist-deposit__td-views">$ 265,265,000.00</td>
+                      <td class="hist-deposit__td-comment">15 нужно вывести и забыть на совсем валюту, которую я сюда завел</td>
+                    </tr>
+                    <tr>
+                      <td class="hist-deposit__td-date">05.04.2023, 16:48</td>
+                      <td class="hist-deposit__td-views">$ 265,265,000.00</td>
+                      <td class="hist-deposit__td-comment">15 нужно вывести и забыть на совсем валюту, которую я сюда завел</td>
+                    </tr>
+                    <tr>
+                      <td class="hist-deposit__td-date">05.04.2023, 16:48</td>
+                      <td class="hist-deposit__td-views">$ 265,265,000.00</td>
+                      <td class="hist-deposit__td-comment">15 нужно вывести и забыть на совсем валюту, которую я сюда завел</td>
+                    </tr><tr>
+                      <td class="hist-deposit__td-date">05.04.2023, 16:48</td>
+                      <td class="hist-deposit__td-views">$ 265,265,000.00</td>
+                      <td class="hist-deposit__td-comment">15 нужно вывести и забыть на совсем валюту, которую я сюда завел</td>
+                    </tr>
+                    <tr>
+                      <td class="hist-deposit__td-date">05.04.2023, 16:48</td>
+                      <td class="hist-deposit__td-views">$ 265,265,000.00</td>
+                      <td class="hist-deposit__td-comment">15 нужно вывести и забыть на совсем валюту, которую я сюда завел</td>
+                    </tr>
+                    <tr>
+                      <td class="hist-deposit__td-date">05.04.2023, 16:48</td>
+                      <td class="hist-deposit__td-views">$ 265,265,000.00</td>
+                      <td class="hist-deposit__td-comment">15 нужно вывести и забыть на совсем валюту, которую я сюда завел</td>
+                    </tr>
+                    <tr>
+                      <td class="hist-deposit__td-date">05.04.2023, 16:48</td>
+                      <td class="hist-deposit__td-views">$ 265,265,000.00</td>
+                      <td class="hist-deposit__td-comment">15 нужно вывести и забыть на совсем валюту, которую я сюда завел</td>
+                    </tr><tr>
+                      <td class="hist-deposit__td-date">05.04.2023, 16:48</td>
+                      <td class="hist-deposit__td-views">$ 265,265,000.00</td>
+                      <td class="hist-deposit__td-comment">15 нужно вывести и забыть на совсем валюту, которую я сюда завел</td>
+                    </tr>
+                    <tr>
+                      <td class="hist-deposit__td-date">05.04.2023, 16:48</td>
+                      <td class="hist-deposit__td-views">$ 265,265,000.00</td>
+                      <td class="hist-deposit__td-comment">15 нужно вывести и забыть на совсем валюту, которую я сюда завел</td>
+                    </tr>
+                    <tr>
+                      <td class="hist-deposit__td-date">05.04.2023, 16:48</td>
+                      <td class="hist-deposit__td-views">$ 265,265,000.00</td>
+                      <td class="hist-deposit__td-comment">15 нужно вывести и забыть на совсем валюту, которую я сюда завел</td>
+                    </tr>
+                    <tr>
+                      <td class="hist-deposit__td-date">05.04.2023, 16:48</td>
+                      <td class="hist-deposit__td-views">$ 265,265,000.00</td>
+                      <td class="hist-deposit__td-comment">15 нужно вывести и забыть на совсем валюту, которую я сюда завел</td>
+                    </tr><tr>
+                      <td class="hist-deposit__td-date">05.04.2023, 16:48</td>
+                      <td class="hist-deposit__td-views">$ 265,265,000.00</td>
+                      <td class="hist-deposit__td-comment">15 нужно вывести и забыть на совсем валюту, которую я сюда завел</td>
+                    </tr>
+                    <tr>
+                      <td class="hist-deposit__td-date">05.04.2023, 16:48</td>
+                      <td class="hist-deposit__td-views">$ 265,265,000.00</td>
+                      <td class="hist-deposit__td-comment">15 нужно вывести и забыть на совсем валюту, которую я сюда завел</td>
+                    </tr>
+                    <tr>
+                      <td class="hist-deposit__td-date">05.04.2023, 16:48</td>
+                      <td class="hist-deposit__td-views">$ 265,265,000.00</td>
+                      <td class="hist-deposit__td-comment">15 нужно вывести и забыть на совсем валюту, которую я сюда завел</td>
+                    </tr>
+                    <tr>
+                      <td class="hist-deposit__td-date">05.04.2023, 16:48</td>
+                      <td class="hist-deposit__td-views">$ 265,265,000.00</td>
+                      <td class="hist-deposit__td-comment">15 нужно вывести и забыть на совсем валюту, которую я сюда завел</td>
+                    </tr><tr>
+                      <td class="hist-deposit__td-date">05.04.2023, 16:48</td>
+                      <td class="hist-deposit__td-views">$ 265,265,000.00</td>
+                      <td class="hist-deposit__td-comment">15 нужно вывести и забыть на совсем валюту, которую я сюда завел</td>
+                    </tr>
+                    <tr>
+                      <td class="hist-deposit__td-date">05.04.2023, 16:48</td>
+                      <td class="hist-deposit__td-views">$ 265,265,000.00</td>
+                      <td class="hist-deposit__td-comment">15 нужно вывести и забыть на совсем валюту, которую я сюда завел</td>
+                    </tr>
+                    <tr>
+                      <td class="hist-deposit__td-date">05.04.2023, 16:48</td>
+                      <td class="hist-deposit__td-views">$ 265,265,000.00</td>
+                      <td class="hist-deposit__td-comment">15 нужно вывести и забыть на совсем валюту, которую я сюда завел</td>
+                    </tr>
+                    <tr>
+                      <td class="hist-deposit__td-date">05.04.2023, 16:48</td>
+                      <td class="hist-deposit__td-views">$ 265,265,000.00</td>
+                      <td class="hist-deposit__td-comment">15 нужно вывести и забыть на совсем валюту, которую я сюда завел</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
       </div>

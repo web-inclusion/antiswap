@@ -23,6 +23,23 @@ document.addEventListener('click', (e) => {
   showTab(elTabBtn);
 });
 
+
+const callbut = document.getElementById("callback-button");
+const modalwin = document.getElementById("modalwin");
+const bodycls = document.getElementsByTagName("body");
+const modactiv = document.getElementById("modal__close");
+
+
+callbut.addEventListener("click", () => {
+  modalwin.classList.add('modal_active');
+  bodycls.classList.add('hidden');
+});
+
+modactiv.addEventListener("click", () => {
+  modalwin.classList.remove('modal_active');
+  bodycls.classList.remove('hidden');
+});
+
 const deleteBtn = document.getElementById("header__notification");
 const popup = document.getElementById("modal-notification");
 const noBtn = document.getElementById("modal-notification__icon-close");
@@ -40,6 +57,10 @@ overlay.addEventListener("click", () => {
   popup.style.display = "none";
   overlay.classList.remove("show");
 });
+
+
+
+
 // yesBtn.addEventListener("click", () => {
 //   popup.style.display = "none";
 //   overlay.classList.add("show");

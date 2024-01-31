@@ -2480,7 +2480,6 @@ main.content-main {
 }
 .statistics__wrap-table {
   width: 100%;
-  width: 100%;
   background-color: #161617;
   border-radius: 16px;
   margin-top: 40px;
@@ -2538,6 +2537,7 @@ main.content-main {
   padding: 0 46px;
   height: 48px;
   margin-top: 40px;
+  margin-bottom: 60px;
 }
 .navigation__wrap {
   position: relative;
@@ -2589,3 +2589,473 @@ main.content-main {
   right: -72px;
   top: 12px;
 }
+
+.active-head__title {
+  line-height: 38px;
+  font-family: "Nunito Sans";
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  margin: 60px 0 40px 0;
+}
+.my-active {
+
+}
+
+.my-active__block {
+  background-color: #161617;
+  border-radius: 16px;
+  min-height: 335px;
+}
+.my-active__top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 24px;
+}
+.my-active__title {
+  line-height: 32px;
+  font-family: "Nunito Sans";
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  padding-left: 52px;
+  margin-top: 4px;
+  position: relative;
+}
+.my-active__title::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: absolute;
+  background-color: #212122;
+  left: 0px;
+  top: -2px;
+  border-radius: 8px;
+  background-image: url(../images/wallet.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.my-active__wallet {
+  padding-left: 58px;
+}
+.my-active__wallet-title {
+  color: #86868B;
+  line-height: 18px;
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.my-active__wallet-number {
+  line-height: 24px;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 600;
+}
+.my-active__middle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
+  padding-top: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #262628;
+  padding: 0 24px 25px 24px;
+}
+
+.my-active__all-active {
+  background-color: #212122;
+  border-radius: 8px;
+  min-height: 100px;
+  padding: 16px;
+}
+.my-active__frozen {
+  background-color: #212122;
+  border-radius: 8px;
+  min-height: 100px;
+  padding: 16px;
+}
+.my-active__title-all {
+  line-height: 24px;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 700;
+}
+.my-active__conclusion {
+  line-height: 18px;
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  font-weight: 600;
+  color: #B1B1B9;
+  text-decoration: none;
+  position: relative;
+}
+.my-active__conclusion::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-image: url(../images/money-send.svg);
+  background-repeat: no-repeat;
+  top: 0;
+  left: -25px;
+}
+
+.my-active__group {
+  display: flex;
+  justify-content: space-between;
+}
+.my-active__group-sum {
+  display: flex;
+  margin-top: 8px;
+}
+.my-active__wallet-cash {
+  line-height: 38px;
+  font-family: "Nunito Sans";
+  font-size: 30px;
+  font-weight: 700;
+}
+.my-active__cash-btc {
+  line-height: 18px;
+  font-family: "Nunito Sans";
+  font-size: 12px;
+  font-weight: 600;
+  color: #86868B;
+  margin-top: 15px;
+  margin-left: 8px;
+}
+
+.my-active__bottom {
+  padding: 20px 24px 24px;
+  display: flex;
+  gap: 24px;
+}
+.my-active__img {
+  width: 64px;
+  height: 64px;
+  margin-top: -6px;
+}
+.my-active__text {
+  color: #fff;
+  line-height: 18px;
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: -1px;
+}
+
+.hist-deposit__wrap {
+  width: 100%;
+  min-height: 400px;
+  background-color: #161617;
+  border-radius: 16px;
+  margin-top: 40px;
+  padding-top: 24px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.hist-deposit__title {
+  margin: 0px 24px 0 64px;
+  line-height: 32px;
+  font-family: "Nunito Sans";
+  font-size: 22px;
+  font-weight: 700;
+  position: relative;
+}
+.hist-deposit__title::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: absolute;
+  background-color: #212122;
+  left: -51px;
+  top: -2px;
+  border-radius: 8px;
+  background-image: url(../images/clock.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.hist-deposit__table-date {
+  width: 150px;
+}
+.hist-deposit__table-views {
+  width: 180px;
+}
+.hist-deposit__table-start {
+  width: 470px;
+}
+
+
+
+
+.hist-deposit__table {
+  box-sizing: border-box;
+  width: 100%;
+  line-height: 18px;
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 24px;
+}
+.hist-deposit__table * th {
+  height: 63px;
+  text-align: left;
+  border-bottom: 1px solod #39393B;
+  padding: 20px 20px;
+}
+.hist-deposit__table tbody td {
+  height: 54px;
+  text-align: left;
+  line-height: 54px;
+  padding-left: 15px;
+  padding-right: 5px;
+}
+.hist-deposit thead tr{
+  border-bottom: 1px solid #39393B;
+}
+.hist-deposit * tr {
+  height: 55px;
+}
+.hist-deposit__td-views:nth-of-type(2n) {
+  color: #2EE111;
+}
+.hist-deposit__td-views:nth-of-type(2n + 1) {
+
+}
+
+.modal {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+  top: -1000px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  overflow-y: scroll;
+  padding: 60px 15px;
+}
+ 
+.modal__content {
+  width: 100%;
+  max-width: 500px;
+  padding: 50px;
+  background: #f9f9f9;
+  border-radius: 3px;
+  position: relative;
+  box-shadow: 0 5px 15px black;
+}
+ 
+.modal__close-button {
+  background: #ff0000;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: none;
+  cursor: pointer;
+  transition: .3s;
+  outline: none;
+}
+ 
+.modal__close-button:hover {
+  transition: .3s;
+  transform: rotate(180deg);
+}
+ 
+.modal__title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin: 0 0 15px;
+}
+ 
+.modal__description {
+  font-size: 1.125rem;
+}
+
+/* ============= */
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font: 16px 'Tahoma', sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.content p {
+  margin: 15px 0;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.header1 {
+  width: 100%;
+  background: #161621;
+  padding: 15px 0;
+}
+
+.header__inner {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo p {
+  color: #fff;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+}
+
+.header__button {
+  background: #ff9c09;
+  border: none;
+  color: #fff;
+  font: 16px 'Tahoma', sans-serif;
+  outline: none;
+  height: 45px;
+  border-radius: 3px;
+  padding: 0 30px;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+  outline: none;
+  margin-left: 15px;
+}
+
+.header__button:hover {
+  background: #4545b5;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.modal {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+  top: -1000px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  overflow-y: scroll;
+  padding: 60px 15px;
+}
+
+.modal_active {
+  position: fixed;
+  top: 0;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.modal__content {
+  width: 100%;
+  max-width: 500px;
+  padding: 50px;
+  background: #f9f9f9;
+  -webkit-box-shadow: 0 5px 15px black;
+          box-shadow: 0 5px 15px black;
+  border-radius: 3px;
+  position: relative;
+}
+
+.modal__close-button {
+  background: #ff0000;
+  height: 30px;
+  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: none;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+  outline: none;
+}
+
+.modal__close-button:hover {
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.modal__title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin: 0 0 15px;
+}
+
+.modal__description {
+  font-size: 1.125rem;
+}
+/*# sourceMappingURL=style.css.map */
