@@ -2912,3 +2912,109 @@ main.content-main {
 #overlay.show {
   display: block;
 }
+
+
+line-height: 60px;
+font-family: "Nunito Sans";
+font-size: 16px;
+font-weight: 600;
+
+.name-exchange {
+}
+.name-exchange__title {
+  line-height: 38px;
+  font-family: "Nunito Sans";
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+.name-exchange__wrap {
+  background-color: #161617;
+  border-radius: 18px;
+  padding: 24px;
+}
+.name-exchange__head {
+  line-height: 32px;
+  font-family: "Nunito Sans";
+  font-size: 22px;
+  font-weight: 600;
+  padding-left: 62px;
+  position: relative;
+}
+
+.name-exchange__head::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: absolute;
+  background-color: #212122;
+  left: 0px;
+  top: -2px;
+  border-radius: 8px;
+  background-image: url(../images/head-exchange.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.name-exchange__pagraph {
+  line-height: 28px;
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+.form_radio {
+	margin-bottom: 10px;
+}
+.form_radio input[type=radio] {
+	display: none;
+}
+.form_radio label {
+	display: block;
+  height: 150px;
+  width: 100%;
+	cursor: pointer;
+	position: relative;
+	padding-left: 94px;
+	margin-right: 0;
+	line-height: 18px;
+	user-select: none;
+  z-index: 20;
+}
+.form_radio label:before {
+	content: "";
+	display: flex;
+  align-items: center;
+  justify-content: center;
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	left: 36px;
+	top: 66px;
+	background: url(../images/radio-1.png) 0 0 no-repeat;
+  z-index: 20;
+}
+/* Checked */
+.form_radio input[type=radio]:checked + label:before {
+	background: url(../images/radio-2.png) 0 0 no-repeat;
+}
+/* Hover */
+.form_radio label:hover:before {
+	filter: brightness(120%);
+}
+
+/* Disabled */
+.form_radio input[type=radio]:checked + label:before {
+	/* filter: grayscale(100%); */
+}
+.form_radio input[type=radio]:checked + label {
+  background-color: #1A1A1B;
+  border-radius: 16px;
+}

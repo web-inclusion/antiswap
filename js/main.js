@@ -50,12 +50,6 @@ try {
   
 }
 
-
-
-
-
-
-
 const showTab = (elTabBtn) => {
   const elTab = elTabBtn.closest('.tab');
   if (elTabBtn.classList.contains('tab-btn-active')) {
