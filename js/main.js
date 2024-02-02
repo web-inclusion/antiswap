@@ -24,39 +24,79 @@ document.addEventListener('click', (e) => {
 });
 
 
-const callbut = document.getElementById("callback-button");
-const modalwin = document.getElementById("modalwin");
-const bodycls = document.getElementsByTagName("body");
-const modactiv = document.getElementById("modal__close");
 
 
-callbut.addEventListener("click", () => {
-  modalwin.classList.add('modal_active');
-  bodycls.classList.add('hidden');
-});
+if (document.getElementById("callback-button")) {
+  const callbut = document.getElementById("callback-button");
+  const bodycls = document.getElementById("body");
+  const modalwin = document.getElementById("modalwin");
+  callbut.addEventListener("click", () => {
+    modalwin.classList.add('modal_active');
+    bodycls.classList.add('hidden');
+  });
+  if(bodycls) {
+    console.log("Есть");
+  }
+}
 
-modactiv.addEventListener("click", () => {
-  modalwin.classList.remove('modal_active');
-  bodycls.classList.remove('hidden');
-});
+if (document.getElementById("modal__close")) {
+  const modactiv = document.getElementById("modal__close");
+  const overlay = document.getElementById("overlay");
+  const bodycls = document.getElementById("body");
+  modactiv.addEventListener("click", () => {
+    //modactiv.classList.remove('modal_active');
+    overlay.classList.remove("show-overlay");
+    bodycls.classList.remove('hidden');
+  });
+}
 
-const deleteBtn = document.getElementById("header__notification");
-const popup = document.getElementById("modal-notification");
-const noBtn = document.getElementById("modal-notification__icon-close");
-const overlay = document.getElementById("overlay");
+if (document.getElementById("modalwin")) {
+  const overlay = document.getElementById("overlay");
+  const modalwin = document.getElementById("modalwin");
+  const bodycls = document.getElementById("body");
+  modalwin.addEventListener("click", () => {
+    //modalwin.classList.remove('modal_active');
+    overlay.classList.remove("show-overlay");
+    bodycls.classList.remove('hidden');
+  });
+}
 
-deleteBtn.addEventListener("click", () => {
-  popup.style.display = "block";
-  overlay.classList.add("show");
-});
-noBtn.addEventListener("click", () => {
-  popup.style.display = "none";
-  overlay.classList.remove("show");
-});
-overlay.addEventListener("click", () => {
-  popup.style.display = "none";
-  overlay.classList.remove("show");
-});
+if (document.getElementById("header__notification")){
+  const deleteBtn = document.getElementById("header__notification");
+  const overlay = document.getElementById("overlay");
+  const popup = document.getElementById("modal-notification");
+  deleteBtn.addEventListener("click", () => {
+    popup.style.display = "block";
+    overlay.classList.add("show-overlay");
+  });
+  deleteBtn.addEventListener("click", () => {
+    popup.style.display = "block";
+    overlay.classList.add("show-overlay");
+  });
+}
+if (document.getElementById("modal-notification")) {
+  const popup = document.getElementById("modal-notification");
+  const overlay = document.getElementById("overlay");
+  const noBtn = document.getElementById("modal-notification__icon-close");
+  noBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+    overlay.classList.remove("show-overlay");
+  });
+}
+if (document.getElementById("modal-notification__icon-close")) {
+  const noBtn = document.getElementById("modal-notification__icon-close");
+  const overlay = document.getElementById("overlay");
+  const popup = document.getElementById("modal-notification");
+  noBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+    overlay.classList.remove("show-overlay");
+  });
+  overlay.addEventListener("click", () => {
+    popup.style.display = "none";
+    overlay.classList.remove("show-overlay");
+  });
+}
+
 
 
 

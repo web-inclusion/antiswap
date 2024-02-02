@@ -13,14 +13,22 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
 </head>
-<body>
+<body id="body">
+  
   <!-- Модальное окно -->
-<div id="modalwin" class="modal">
-  <div class="modal__content">
-    <button id="modal__close" class="modal__close-button"><img src="./img/close.svg" width="18" alt=""></button>
-    <!-- Контент модального окна -->
-    <h1 class="modal__title">Контент для примера</h1>
-    <p class="modal__descruption">Статья с уроком - <a href="/kak-sdelat-modalnoe-okno-na-sajte.html">тут</a>.</p>
+<div id="overlay" class="overlay ">
+  <div id="modalwin" class="modal">
+    <div class="modal__content">
+      <h1 class="modal__title">Вывод</h1>
+      <p class="modal__paragrapg">Введите адрес BTC-кошелька</p>
+      <form action="#">
+        <input class="modal__input" type="text" placeholder="1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2">
+      </form>
+      <!-- <button id="modal__close" class="modal__close-button"><img src="./img/close.svg" width="18" alt=""></button> -->
+      <!-- Контент модального окна -->
+      
+      <!-- <p class="modal__descruption">Статья с уроком - <a href="/kak-sdelat-modalnoe-okno-na-sajte.html">тут</a>.</p> -->
+    </div>
   </div>
 </div>
   <div class="wrapper">
