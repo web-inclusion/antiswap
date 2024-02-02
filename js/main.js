@@ -1,51 +1,57 @@
-const modalController = ({modal, btnOpen, btnClose, time = 300}) => {
-  const buttonElems = document.querySelectorAll(btnOpen);
-  const modalElem = document.querySelector(modal);
-
-  modalElem.style.cssText = `
-    display: flex;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity ${time}ms ease-in-out;
-  `;
-
-  const closeModal = event => {
-    const target = event.target;
-
-    if (
-      target === modalElem ||
-      (btnClose && target.closest(btnClose)) ||
-      event.code === 'Escape'
-      ) {
-      
-      modalElem.style.opacity = 0;
-
-      setTimeout(() => {
-        modalElem.style.visibility = 'hidden';
-      }, time);
-
-      window.removeEventListener('keydown', closeModal);
+try {
+  const modalController = ({modal, btnOpen, btnClose, time = 300}) => {
+    const buttonElems = document.querySelectorAll(btnOpen);
+    const modalElem = document.querySelector(modal);
+  
+    modalElem.style.cssText = `
+      display: flex;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity ${time}ms ease-in-out;
+    `;
+  
+    const closeModal = event => {
+      const target = event.target;
+  
+      if (
+        target === modalElem ||
+        (btnClose && target.closest(btnClose)) ||
+        event.code === 'Escape'
+        ) {
+        
+        modalElem.style.opacity = 0;
+  
+        setTimeout(() => {
+          modalElem.style.visibility = 'hidden';
+        }, time);
+  
+        window.removeEventListener('keydown', closeModal);
+      }
     }
-  }
-
-  const openModal = () => {
-    modalElem.style.visibility = 'visible';
-    modalElem.style.opacity = 1;
-    window.addEventListener('keydown', closeModal)
+  
+    const openModal = () => {
+      modalElem.style.visibility = 'visible';
+      modalElem.style.opacity = 1;
+      window.addEventListener('keydown', closeModal)
+    };
+  
+    buttonElems.forEach(btn => {
+      btn.addEventListener('click', openModal);
+    });
+  
+    modalElem.addEventListener('click', closeModal);
   };
-
-  buttonElems.forEach(btn => {
-    btn.addEventListener('click', openModal);
+  modalController({
+    modal: '.modal',
+    btnOpen: '.my-active__conclusion',
+    btnClose: '.modal__close'
   });
+} catch (error) {
+  
+}
 
-  modalElem.addEventListener('click', closeModal);
-};
 
-modalController({
-  modal: '.modal',
-  btnOpen: '.my-active__conclusion',
-  btnClose: '.modal__close'
-});
+
 
 
 
@@ -81,11 +87,11 @@ if (document.getElementById("header__notification")){
   const popup = document.getElementById("modal-notification");
   deleteBtn.addEventListener("click", () => {
     popup.style.display = "block";
-    overlay.classList.add("show-overlay");
+    overlay.classList.add("show-");
   });
   deleteBtn.addEventListener("click", () => {
     popup.style.display = "block";
-    overlay.classList.add("show-overlay");
+    overlay.classList.add("show");
   });
 }
 if (document.getElementById("modal-notification")) {
@@ -94,7 +100,7 @@ if (document.getElementById("modal-notification")) {
   const noBtn = document.getElementById("modal-notification__icon-close");
   noBtn.addEventListener("click", () => {
     popup.style.display = "none";
-    overlay.classList.remove("show-overlay");
+    overlay.classList.remove("show");
   });
 }
 if (document.getElementById("modal-notification__icon-close")) {
@@ -103,11 +109,11 @@ if (document.getElementById("modal-notification__icon-close")) {
   const popup = document.getElementById("modal-notification");
   noBtn.addEventListener("click", () => {
     popup.style.display = "none";
-    overlay.classList.remove("show-overlay");
+    overlay.classList.remove("show");
   });
   overlay.addEventListener("click", () => {
     popup.style.display = "none";
-    overlay.classList.remove("show-overlay");
+    overlay.classList.remove("show");
   });
 }
 
