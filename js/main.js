@@ -1,3 +1,55 @@
+const modalController = ({modal, btnOpen, btnClose, time = 300}) => {
+  const buttonElems = document.querySelectorAll(btnOpen);
+  const modalElem = document.querySelector(modal);
+
+  modalElem.style.cssText = `
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity ${time}ms ease-in-out;
+  `;
+
+  const closeModal = event => {
+    const target = event.target;
+
+    if (
+      target === modalElem ||
+      (btnClose && target.closest(btnClose)) ||
+      event.code === 'Escape'
+      ) {
+      
+      modalElem.style.opacity = 0;
+
+      setTimeout(() => {
+        modalElem.style.visibility = 'hidden';
+      }, time);
+
+      window.removeEventListener('keydown', closeModal);
+    }
+  }
+
+  const openModal = () => {
+    modalElem.style.visibility = 'visible';
+    modalElem.style.opacity = 1;
+    window.addEventListener('keydown', closeModal)
+  };
+
+  buttonElems.forEach(btn => {
+    btn.addEventListener('click', openModal);
+  });
+
+  modalElem.addEventListener('click', closeModal);
+};
+
+modalController({
+  modal: '.modal',
+  btnOpen: '.my-active__conclusion',
+  btnClose: '.modal__close'
+});
+
+
+
+
 const showTab = (elTabBtn) => {
   const elTab = elTabBtn.closest('.tab');
   if (elTabBtn.classList.contains('tab-btn-active')) {
@@ -22,44 +74,6 @@ document.addEventListener('click', (e) => {
   const elTabBtn = e.target.closest('.tab-btn');
   showTab(elTabBtn);
 });
-
-
-
-
-if (document.getElementById("callback-button")) {
-  const callbut = document.getElementById("callback-button");
-  const bodycls = document.getElementById("body");
-  const modalwin = document.getElementById("modalwin");
-  callbut.addEventListener("click", () => {
-    modalwin.classList.add('modal_active');
-    bodycls.classList.add('hidden');
-  });
-  if(bodycls) {
-    console.log("Есть");
-  }
-}
-
-if (document.getElementById("modal__close")) {
-  const modactiv = document.getElementById("modal__close");
-  const overlay = document.getElementById("overlay");
-  const bodycls = document.getElementById("body");
-  modactiv.addEventListener("click", () => {
-    //modactiv.classList.remove('modal_active');
-    overlay.classList.remove("show-overlay");
-    bodycls.classList.remove('hidden');
-  });
-}
-
-if (document.getElementById("modalwin")) {
-  const overlay = document.getElementById("overlay");
-  const modalwin = document.getElementById("modalwin");
-  const bodycls = document.getElementById("body");
-  modalwin.addEventListener("click", () => {
-    //modalwin.classList.remove('modal_active');
-    overlay.classList.remove("show-overlay");
-    bodycls.classList.remove('hidden');
-  });
-}
 
 if (document.getElementById("header__notification")){
   const deleteBtn = document.getElementById("header__notification");
@@ -97,15 +111,3 @@ if (document.getElementById("modal-notification__icon-close")) {
   });
 }
 
-
-
-
-
-// yesBtn.addEventListener("click", () => {
-//   popup.style.display = "none";
-//   overlay.classList.add("show");
-// });
-// buyBtn.addEventListener("click", () => {
-//   success.style.display = "none";
-//   overlay.classList.remove("show");
-// });

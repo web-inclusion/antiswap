@@ -13,24 +13,22 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
 </head>
-<body id="body">
-  
-  <!-- Модальное окно -->
-<div id="overlay" class="overlay ">
-  <div id="modalwin" class="modal">
-    <div class="modal__content">
-      <h1 class="modal__title">Вывод</h1>
-      <p class="modal__paragrapg">Введите адрес BTC-кошелька</p>
-      <form action="#">
-        <input class="modal__input" type="text" placeholder="1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2">
-      </form>
-      <!-- <button id="modal__close" class="modal__close-button"><img src="./img/close.svg" width="18" alt=""></button> -->
-      <!-- Контент модального окна -->
-      
-      <!-- <p class="modal__descruption">Статья с уроком - <a href="/kak-sdelat-modalnoe-okno-na-sajte.html">тут</a>.</p> -->
-    </div>
+<body>
+<div id="overlay" class="overlay"></div>
+<div id="modalmain" class="modal blur">
+  <div class="modal__main">
+    <h4 class="modal__title">Вывод</h4>
+    <p class="modal__paragraph">Введите адрес BTC-кошелька</p>
+    <form action="#">
+      <input class="modal__input" type="text" placeholder="1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2">
+      <p class="modal__paragraph-sum">Сумма вывода в USD</p>
+      <input class="modal__input" type="text" placeholder="$100">
+      <button class="modal__submit" type="submit">Запросить вывод</button>
+    </form>
+    <button class="modal__close">&#10006;</button>
   </div>
 </div>
+
   <div class="wrapper">
     <header class="header top__line">
       <div class="container">
