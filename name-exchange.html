@@ -247,15 +247,33 @@
               <div class="name-exchange__wrap">
                 <h4 class="name-exchange__head">Файл курсов</h4>
                 <p class="name-exchange__pagraph">Выберите какой файл курсов будет использоваться</p>
-                <div class="form_radio">
-                  <input id="radio-1" type="radio" name="radio" value="1" checked>
-                  <label for="radio-1">Radio button 1</label>
-                </div>
-                <div class="form_radio">
-                  <input id="radio-2" type="radio" name="radio" value="2">
-                  <label for="radio-2">Radio button 2</label>
-                </div>
+                <form action="#">
+                  <div class="form_radio">
+                    <input id="radio-1" type="radio" name="radio" value="1" checked>
+                    <label for="radio-1">
+                      <div class="form-radio__group">
+                        <h3 class="form-radio__title">Файл курсов, сгенерированный через конструктор AntiSwap</h3>
+                        <a class="form-radio__link" href="#">https://antiswap.info/courses/exchanger.xml</a>
+                        <p class="form-radio__paragraph">После настройки направлений обмена в конструкторе, вы можете делиться данной ссылкой с другими мониторингами.</p>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="form_radio">
+                    <input id="radio-2" type="radio" name="radio" value="2">
+                    <label for="radio-2">
+                      <div class="form-radio__group">
+                        <h3 class="form-radio__title-two">Внешний файл курсов, сгенерированный самостоятельно</h3>
+                        <div class="form-radio__input-wrap">
+                          <input type="text" class="form-radio__input-file" placeholder="Вставьте ссылку">
+                          <a href="#" class="form-radio__button">Сохранить</a>
+                        </div>
+                        <p class="form-radio__paragraph">Если вы самостоятельно сгенерировали файл курсов, просто вставьте ссылку на него в поле выше. <a href="#">Какой нужен формат файла?</a></p>
+                      </div>
+                    </label>
+                  </div>
+                </form>
               </div>
+              <h4 class="name-exchange__exch-title">Направления обмена файла курсов</h4>
             </div>
           </div>
         </div>
