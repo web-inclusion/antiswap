@@ -163,15 +163,21 @@ main.content-main {
   line-height: 24px; 
   margin-top: 40px;
 }
+.component-icon {
+}
 .component-icon__wrap {
   display: flex;
   margin-top: 140px;
+  white-space: nowrap;
+  animation: marquee 20.5s infinite linear;
 }
 .component-icon__wrap-two {
   display: flex;
   margin-top: 24px;
   margin-bottom: 140px;
   flex-direction: row-reverse;
+  white-space: nowrap;
+  animation: marquee 20.5s infinite linear;
 }
 .component-icon__mod {
   display: flex;
@@ -3478,12 +3484,45 @@ font-weight: 600;
 .form-direct__input-group {
   display: flex;
   margin: 18px 0 0 68px;
+  gap: 5px;
 }
 .form-direct__text {
-  line-height: 24px;
+  line-height: 56px;
   font-family: "Nunito Sans";
   font-size: 16px;
   font-weight: 600;
 }
 .form-direct__currency {
+  line-height: 24px;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 600;
+  color: #86868B;
+  margin-top: 17px;
+}
+.form-direct__open {
+  position: absolute;
+  width: 12px;
+  height: 7px;
+  background-repeat: no-repeat;
+  top: 28px;
+  right: 25px;
+  background-image: url(../images/arrow-bottom-list.svg);
+  cursor: pointer;
+  transform: rotate(0deg);
+}
+.form-direct__close {
+  transform: rotate(90deg);
+}
+
+
+.select__input {
+  display: none;
+}
+.select__input:checked + label {
+  background-color: #dedede;
+}
+.select__input:disabled + label {
+  opacity: 0.6;
+  pointer-events: none;
 }
