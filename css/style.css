@@ -166,7 +166,12 @@ main.content-main {
 .component-icon__wrap {
   display: flex;
   margin-top: 140px;
+}
+.component-icon__wrap-two {
+  display: flex;
+  margin-top: 24px;
   margin-bottom: 140px;
+  flex-direction: row-reverse;
 }
 .component-icon__mod {
   display: flex;
@@ -183,42 +188,215 @@ main.content-main {
   background-position: 16px 16px;
   width: 80px;
   height: 80px;
+  position: relative;
 }
+
 .component-icon__mod + .component-icon__mod {
   margin-left: 16px;
 }
 .component-icon__mod::nth-child(1) {
   margin-left: -24px;
 }
-.component-icon__mod-0 {
-  background-image: url(../images/сomponent0.svg);
+.component-icon__mod {
+  position: relative;
 }
-.component-icon__mod-1 {
-  background-image: url(../images/сomponent1.svg);
+.component-icon__mod-1::before {
+  content: "";
+  background-image: url(../images/crypto/01.svg);
+  background-size: cover;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  inset: 16px;
 }
-.component-icon__mod-2 {
-  background-image: url(../images/сomponent2.svg);
+.component-icon__mod-2::after {
+  content: "";
+  background-image: url(../images/crypto/02.svg);
+  background-size: cover;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  inset: 16px;
 }
-.component-icon__mod-3 {
-  background-image: url(../images/сomponent3.svg);
+.component-icon__mod-3::after {
+  content: "";
+  background-image: url(../images/crypto/03.svg);
+  background-size: cover;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  inset: 16px;
 }
-.component-icon__mod-4 {
-  background-image: url(../images/сomponent4.svg);
+.component-icon__mod-4::after {
+  content: "";
+  background-image: url(../images/crypto/04.svg);
+  background-size: cover;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  inset: 16px;
 }
-.component-icon__mod-5 {
-  background-image: url(../images/сomponent5.svg);
+.component-icon__mod-5::after {
+  content: "";
+  background-image: url(../images/crypto/05.svg);
+  background-size: cover;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  inset: 16px;
 }
-.component-icon__mod-6 {
-  background-image: url(../images/сomponent6.svg);
+.component-icon__mod-6::after {
+  content: "";
+  background-image: url(../images/crypto/06.svg);
+  background-size: cover;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  inset: 16px;
 }
-.component-icon__mod-7 {
-  background-image: url(../images/сomponent7.svg);
+.component-icon__mod-7::after {
+  content: "";
+  background-image: url(../images/crypto/07.svg);
+  background-size: cover;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  inset: 16px;
 }
-.component-icon__mod-8 {
-  background-image: url(../images/сomponent8.svg);
+.component-icon__mod-8::after {
+  content: "";
+  background-image: url(../images/crypto/08.svg);
+  background-size: cover;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  inset: 16px;
 }
-.component-icon__mod-9{
-  background-image: url(../images/сomponent9.svg);
+.component-icon__mod-9::after {
+  content: "";
+  background-image: url(../images/crypto/09.svg);
+  background-size: cover;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  inset: 16px;
+}
+.component-icon__mod-10::after {
+  content: "";
+  background-image: url(../images/crypto/10.svg);
+  background-size: cover;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  inset: 16px;
+}
+.component-icon__mod-11::after {
+  content: "";
+  background-image: url(../images/crypto/11.svg);
+  background-size: cover;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  inset: 16px;
+}
+.component-icon__mod-12::after {
+  content: "";
+  background-image: url(../images/crypto/12.svg);
+  background-size: cover;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  inset: 16px;
+}
+.component-icon__mod-13::after {
+  content: "";
+  background-image: url(../images/crypto/13.svg);
+  background-size: cover;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  inset: 16px;
+}
+.component-icon__mod-14::after {
+  content: "";
+  background-image: url(../images/crypto/14.svg);
+  background-size: cover;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  inset: 16px;
+}
+.component-icon__mod-15::after {
+  content: "";
+  background-image: url(../images/crypto/15.svg);
+  background-size: cover;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  inset: 16px;
+}
+.component-icon__mod-16::after {
+  content: "";
+  background-image: url(../images/crypto/16.svg);
+  background-size: cover;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  inset: 16px;
+}
+.component-icon__mod-17::after {
+  content: "";
+  background-image: url(../images/crypto/17.svg);
+  background-size: cover;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  inset: 16px;
+}
+.component-icon__mod-18::after {
+  content: "";
+  background-image: url(../images/crypto/18.svg);
+  background-size: cover;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  inset: 16px;
+}
+.component-icon__mod-19::after {
+  content: "";
+  background-image: url(../images/crypto/19.svg);
+  background-size: cover;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  inset: 16px;
+}
+.component-icon__mod-20::after {
+  content: "";
+  background-image: url(../images/crypto/20.svg);
+  background-size: cover;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  inset: 16px;
+}
+.component-icon__mod-21::after {
+  content: "";
+  background-image: url(../images/crypto/21.svg);
+  background-size: cover;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  inset: 16px;
+}
+.component-icon__mod-22::after {
+  content: "";
+  background-image: url(../images/crypto/22.svg);
+  background-size: cover;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  inset: 16px;
 }
 
 
@@ -3279,6 +3457,33 @@ font-weight: 600;
   background-position: center center;
 }
 
-.form-direct__input-text {
+.form-direct__input-div {
   background-color: #212122;
+  height: 60px;
+  width: auto;
+  border-radius: 16px;
+  background-color: #212122;
+  margin: 0 24px;
+  position: relative;
+}
+.form-direct__img-currency {
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/currency.svg);
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 18px;
+}
+.form-direct__input-group {
+  display: flex;
+  margin: 18px 0 0 68px;
+}
+.form-direct__text {
+  line-height: 24px;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 600;
+}
+.form-direct__currency {
 }
