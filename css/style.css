@@ -3515,14 +3515,26 @@ font-weight: 600;
   transform: rotate(90deg);
 }
 
-
-.select__input {
+.form-direct__radio-group {
+  background-color: #212122;
+  border-radius: 12px;
+  margin: 0 24px;
+}
+.form-direct__label {
+  height: 60px;
+  padding: 0 12px;
+  cursor: pointer;
+}
+.form-direct__input {
   display: none;
 }
-.select__input:checked + label {
-  background-color: #dedede;
+.form-direct__input:checked + label {
+  
 }
-.select__input:disabled + label {
+.form-direct__input:disabled + label {
   opacity: 0.6;
   pointer-events: none;
+}
+.form-direct__label {
+  display: block;
 }
