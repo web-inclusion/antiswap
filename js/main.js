@@ -111,3 +111,25 @@ if (document.getElementById("modal-notification__icon-close")) {
   });
 }
 
+const button = document.querySelector("#form-direct-id");
+const formList = document.querySelector(".form-direct__radio-group");
+const formSpan = document.querySelector(".form-direct__open");
+const formLabel = document.querySelector(".form-direct__label");
+
+handleClick = (event) => {
+  console.log('event');
+}
+
+formLabel.forEach(label => {
+  label.addEventListener("click", handleClick);
+});
+
+button.addEventListener("click", function(){
+  formList.classList.toggle("form-direct__hidden");
+  formSpan.classList.toggle("form-direct__close");
+});
+
+formLabel.addEventListener("click", function(event) {
+  formList.classList.add("form-direct__hidden");
+  console.log("event")
+});

@@ -3481,13 +3481,29 @@ font-weight: 600;
   top: 10px;
   left: 18px;
 }
+.form-direct__img-bnb {
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/bnb-coin.svg);
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 18px;
+}
 .form-direct__input-group {
   display: flex;
   margin: 18px 0 0 68px;
   gap: 5px;
+  cursor: pointer;
 }
 .form-direct__text {
   line-height: 56px;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 600;
+}
+.form-direct__text-smart {
+  line-height: 21px;
   font-family: "Nunito Sans";
   font-size: 16px;
   font-weight: 600;
@@ -3500,41 +3516,59 @@ font-weight: 600;
   color: #86868B;
   margin-top: 17px;
 }
+.form-direct__currency-smart {
+  line-height: 24px;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 600;
+  color: #86868B;
+  margin-top: 0px;
+}
 .form-direct__open {
   position: absolute;
-  width: 12px;
-  height: 7px;
+  width: 20px;
+  height: 20px;
   background-repeat: no-repeat;
-  top: 28px;
+  top: 22px;
   right: 25px;
   background-image: url(../images/arrow-bottom-list.svg);
+  background-position: 50% 50%;
   cursor: pointer;
-  transform: rotate(0deg);
-}
-.form-direct__close {
   transform: rotate(90deg);
+}
+
+.form-direct__close {
+  transform: rotate(0deg);
 }
 
 .form-direct__radio-group {
   background-color: #212122;
-  border-radius: 12px;
-  margin: 0 24px;
+  border-radius: 0 0 12px 12px;
+  margin: -12px 24px 0;
+  padding: 12px 0;
 }
 .form-direct__label {
   height: 60px;
-  padding: 0 12px;
+  padding: 0 0px;
   cursor: pointer;
+  position: relative;
 }
 .form-direct__input {
   display: none;
 }
 .form-direct__input:checked + label {
-  
+  background-color: #2e2e31;
+}
+.form-direct__input:hover + label {
+  background-color: #2e2e31;
 }
 .form-direct__input:disabled + label {
   opacity: 0.6;
   pointer-events: none;
 }
 .form-direct__label {
-  display: block;
+  display: flex;
+}
+.form-direct__hidden {
+  visibility: hidden;
 }
