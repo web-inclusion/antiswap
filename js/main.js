@@ -1,3 +1,5 @@
+
+
 try {
   const modalController = ({modal, btnOpen, btnClose, time = 300}) => {
     const buttonElems = document.querySelectorAll(btnOpen);
@@ -111,31 +113,83 @@ if (document.getElementById("modal-notification__icon-close")) {
   });
 }
 
+try {
+  // Полифилл для метода forEach для NodeList
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = function (callback, thisArg) {
+      thisArg = thisArg || window;
+      for (var i = 0; i < this.length; i++) {
+        callback.call(thisArg, this[i], i, this);
+      }
+    };
+  }
+} catch (error) {
+  
+}
 
 
-// const button = document.querySelector("#form-direct-id");
-// const formList = document.querySelector(".form-direct__radio-group");
-// const formSpan = document.querySelector(".form-direct__open");
 
-// const formLabel = document.querySelectorAll('.form-direct__label')
 
-// let paragrCrypto = document.querySelector('.label-p') 
-// let paragrMain = document.querySelector('.label-main')
+document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
+	const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
+	const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
+	const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
+	const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
+  const mainButton = dropDownWrapper.querySelector('.dropdown__button');
+  const spanTextBut = dropDownWrapper.querySelector('.dropdown__currency-text');
+  const spanText = dropDownWrapper.querySelector('.dropdown__item-text');
+  const currenImg = dropDownWrapper.querySelector('.dropdown__currency-img');
+  const typeImg = dropDownWrapper.querySelector('.dropdown__item-img');
 
-// handleClick = (event) => {
-//   paragrMain.textContent = event.target.textContent;
-//   console.log("event.target.textContent");
-// }
+	// Клик по кнопке. Открыть/Закрыть select
+	dropDownBtn.addEventListener('click', function (e) {
+		dropDownList.classList.toggle('dropdown__list--visible');
+        this.classList.add('dropdown__button--active');
+        this.classList.add('dropdown__button--noradius');
+	});
+  
+	// Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
+	dropDownListItems.forEach(function (listItem) {
+		listItem.addEventListener('click', function (e) {
+			e.stopPropagation();
+			spanTextBut.innerText = this.querySelector('.dropdown__item-text').innerText;
+      currenImg.src = this.querySelector('.dropdown__item-img').src;
+			dropDownBtn.focus();
+			dropDownInput.value = this.dataset.value;
+			dropDownList.classList.remove('dropdown__list--visible');
+      dropDownBtn.classList.remove('dropdown__button--noradius');
+		});
+	});
+  console.log(spanText.innerText);
+	// Клик снаружи дропдауна. Закрыть дропдаун
+	document.addEventListener('click', function (e) {
+		if (e.target !== dropDownBtn) {
+			dropDownBtn.classList.remove('dropdown__button--active');
+			dropDownList.classList.remove('dropdown__list--visible');
+      dropDownBtn.classList.remove('dropdown__button--noradius');
+		}
+	});
 
-// formLabel.forEach(label => {
-//   label.addEventListener("click", handleClick);
-// });
-// button.addEventListener("click", function(){
-//   formList.classList.toggle("form-direct__hidden");
-//   formSpan.classList.toggle("form-direct__close");
-// });
+	// Нажатие на Tab или Escape. Закрыть дропдаун
+	document.addEventListener('keydown', function (e) {
+		if (e.key === 'Tab' || e.key === 'Escape') {
+			dropDownBtn.classList.remove('dropdown__button--active');
+			dropDownList.classList.remove('dropdown__list--visible');
+      dropDownBtn.classList.remove('dropdown__button--noradius');
+		}
+	});
 
-// const formLabels = document.querySelector('.form-direct__label')
-// formLabels.addEventListener("click", function(event) {
-//   formList.classList.add("form-direct__hidden");
-// });
+  dropDownWrapper.querySelector('.dropdown__button').addEventListener('click', function (event) {
+    event.preventDefault()
+    let value1 = dropDownWrapper.querySelector('.dropdown__button').value;
+    if (dropDownWrapper.querySelector('.dropdown__button').length == 0) {
+        thirdRow.innerHTML = value1;
+    } else {
+      dropDownWrapper.querySelector('.dropdown__button')[0].innerHTML = value1;
+    }
+  });
+  
+  
+});
+
+

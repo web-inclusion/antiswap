@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Main Desktop</title>
-  <link rel="stylesheet" href="css/reset.css">
+  <!-- <link rel="stylesheet" href="css/reset.css"> -->
   <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
       <input class="modal__input" type="text" placeholder="$100">
       <button class="modal__submit" type="submit">Запросить вывод</button>
     </form>
-    <button class="modal__close">&#10006;</button>
+    <button type="button" class="modal__close">&#10006;</button>
   </div>
 </div>
 
@@ -248,68 +248,39 @@
                 <h4 class="add-direction__title">Добавить направление</h4>
               </div>
               <div class="add-direction__wrap">
-                <form action="#" class="form-direct">
+                <form class="form-direct">
                   <div class="add-direction__form-header">
                     <span class="add-direction__category"></span>
                     <h4 class="add-direction__title">Конструктор</h4>
                   </div>
                   <p class="form-direct__pagaraph">Отдаете</p>
-
-
-                  
-                  
-
-
-                  <!-- <div  id="form-direct-id" class="form-direct__input-div">
-                    <span class="form-direct__img-currency"></span>
-                    <div class="form-direct__input-group">
-                      <p class="form-direct__text label-main">Наличные</p>
-                      <span class="form-direct__currency">RUB</span>
+                  <div class="form-group">
+                    <div class="dropdown">
+                        <button class="dropdown__button">
+                          <img class="dropdown__currency-img" src="./images/currency.svg" alt="">
+                          <span class="dropdown__currency-text">Наличные</span>
+                          <span class="dropdown__currency-type">RUB</span>
+                        </button>
+                        <ul class="dropdown__list">
+                            <li class="dropdown__list-item" data-value="travel">
+                              <img class="dropdown__item-img" src="./images/bnb-coin.svg" alt="">
+                              <span class="dropdown__item-text">Smart Chain 1</span>
+                              <span class="dropdown__item-type">Bnb</span>
+                            </li>
+                            <li class="dropdown__list-item" data-value="lessons">
+                              <img class="dropdown__item-img" src="./images/coin-logo-one.svg" alt="">
+                              <span class="dropdown__item-text">Smart Chain 2</span>
+                              <span class="dropdown__item-type">Cake</span>
+                            </li>
+                            <li class="dropdown__list-item" data-value="sport">
+                              <img class="dropdown__item-img" src="./images/currency.svg" alt="">
+                              <span class="dropdown__item-text">Наличные</span>
+                              <span class="dropdown__item-type">RUB</span>
+                            </li>
+                        </ul>
+                        <input type="text" name="select-category" value="" class="dropdown__input-hidden" >
                     </div>
-                    <span class="form-direct__open"></span>
                   </div>
-                  <div class="form-direct__radio-group form-direct__hidden">
-                    <input id="singleSelect0" class="form-direct__input" type="radio" name="singleSelect" checked />
-                    <label for="singleSelect0" class="form-direct__label">
-                      <span class="form-direct__img-bnb"></span>
-                      <div class="form-direct__input-group">
-                        <p class="form-direct__text-smart label-p">Smart Chain1</p>
-                        <span class="form-direct__currency-smart">RUB</span>
-                      </div>
-                    </label>
-                    <input id="singleSelect1" class="form-direct__input" type="radio" name="singleSelect" />
-                    <label for="singleSelect1" class="form-direct__label">
-                      <span class="form-direct__img-bnb"></span>
-                      <div class="form-direct__input-group">
-                        <p class="form-direct__text-smart label-p">Smart Chain2</p>
-                        <span class="form-direct__currency-smart">RUB</span>
-                      </div>
-                    </label>
-                    <input id="singleSelect2" class="form-direct__input" type="radio" name="singleSelect" disabled />
-                    <label for="singleSelect2" class="form-direct__label">
-                      <span class="form-direct__img-bnb"></span>
-                      <div class="form-direct__input-group">
-                        <p class="form-direct__text-smart label-p">Smart Chain3</p>
-                        <span class="form-direct__currency-smart">RUB</span>
-                      </div>
-                    </label>
-                    <input id="singleSelect3" class="form-direct__input" type="radio" name="singleSelect" />
-                    <label for="singleSelect3" class="form-direct__label">
-                      <span class="form-direct__img-bnb"></span>
-                      <div class="form-direct__input-group">
-                        <p class="form-direct__text-smart label-p">Smart Chain4</p>
-                        <span class="form-direct__currency-smart">RUB</span>
-                      </div>
-                    </label>
-                    <input id="singleSelect4" class="form-direct__input" type="radio" name="singleSelect" />
-                    <label for="singleSelect4" class="form-direct__label">
-                      <span class="form-direct__img-bnb"></span>
-                      <div class="form-direct__input-group">
-                        <p class="form-direct__text-smart label-p">Smart Chain5</p>
-                        <span class="form-direct__currency-smart">RUB</span>
-                      </div>
-                    </label>
-                  </div> -->
                 </form>
               </div>
             </div>  
@@ -338,6 +309,6 @@
       </div>
     </footer>
   </div>
-  <script src="js/main.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>
