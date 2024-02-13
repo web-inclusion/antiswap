@@ -14,18 +14,16 @@
   <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
-<div id="overlay" class="overlay"></div>
-<div id="modalmain" class="modal blur">
+<div id="overlay"></div>
+<div id="modal" class="modal blur">
   <div class="modal__main">
-    <h4 class="modal__title">Вывод</h4>
-    <p class="modal__paragraph">Введите адрес BTC-кошелька</p>
+    <h4 class="modal__title">Комментарий для направления</h4>
+    <p class="modal__comment">Комментарий будет отображаться как дополнительная информация в момент создания обмена.</p>
     <form action="#">
-      <input class="modal__input" type="text" placeholder="1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2">
-      <p class="modal__paragraph-sum">Сумма вывода в USD</p>
-      <input class="modal__input" type="text" placeholder="$100">
-      <button class="modal__submit" type="submit">Запросить вывод</button>
+      <textarea class="modal__text" name="" id="" cols="80" rows="60" placeholder="Введите текст комментария"></textarea>
+      <button class="modal__submit" type="submit">Оставить комментарий</button>
     </form>
-    <button type="button" class="modal__close">&#10006;</button>
+    <button class="modal__close-vect">&#10006;</button>
   </div>
 </div>
 
@@ -248,40 +246,178 @@
                 <h4 class="add-direction__title">Добавить направление</h4>
               </div>
               <div class="add-direction__wrap">
-                <form class="form-direct">
-                  <div class="add-direction__form-header">
-                    <span class="add-direction__category"></span>
-                    <h4 class="add-direction__title">Конструктор</h4>
-                  </div>
-                  <p class="form-direct__pagaraph">Отдаете</p>
-                  <div class="form-group">
-                    <div class="dropdown">
-                        <button class="dropdown__button">
-                          <img class="dropdown__currency-img" src="./images/currency.svg" alt="">
-                          <span class="dropdown__currency-text">Наличные</span>
-                          <span class="dropdown__currency-type">RUB</span>
-                        </button>
-                        <ul class="dropdown__list">
-                            <li class="dropdown__list-item" data-value="travel">
-                              <img class="dropdown__item-img" src="./images/bnb-coin.svg" alt="">
-                              <span class="dropdown__item-text">Smart Chain 1</span>
-                              <span class="dropdown__item-type">Bnb</span>
-                            </li>
-                            <li class="dropdown__list-item" data-value="lessons">
-                              <img class="dropdown__item-img" src="./images/coin-logo-one.svg" alt="">
-                              <span class="dropdown__item-text">Smart Chain 2</span>
-                              <span class="dropdown__item-type">Cake</span>
-                            </li>
-                            <li class="dropdown__list-item" data-value="sport">
-                              <img class="dropdown__item-img" src="./images/currency.svg" alt="">
-                              <span class="dropdown__item-text">Наличные</span>
-                              <span class="dropdown__item-type">RUB</span>
-                            </li>
-                        </ul>
-                        <input type="text" name="select-category" value="" class="dropdown__input-hidden" >
+                <div class="form__wrap">
+                  <form action="#" class="form-direct">
+                    <div class="form__one-block">
+                      <div class="add-direction__form-header">
+                        <span class="add-direction__category"></span>
+                        <h4 class="add-direction__title">Конструктор</h4>
+                      </div>
+                      <p class="form-direct__pagaraph">Отдаете</p>
+                      <div class="form-group">
+                        <div class="dropdown">
+                            <button class="dropdown__button">
+                              <img class="dropdown__currency-img" src="./images/currency.svg" alt="">
+                              <span class="dropdown__currency-text">Наличные</span>
+                              <span class="dropdown__currency-type">RUB</span>
+                            </button>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="Smart Chain">
+                                  <img class="dropdown__item-img" src="./images/bnb-coin.svg" alt="">
+                                  <span class="dropdown__item-text">Smart Chain</span>
+                                  <span class="dropdown__item-type">Bnb</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="Smart Chain 2">
+                                  <img class="dropdown__item-img" src="./images/coin-logo-one.svg" alt="">
+                                  <span class="dropdown__item-text">PancakeSwap</span>
+                                  <span class="dropdown__item-type">Cake</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="rub">
+                                  <img class="dropdown__item-img" src="./images/currency.svg" alt="">
+                                  <span class="dropdown__item-text">Наличные</span>
+                                  <span class="dropdown__item-type">RUB</span>
+                                </li>
+                            </ul>
+                            <input type="text" name="select-category" value="" class="dropdown__input-hidden" >
+                        </div>
+                      </div>
+                      <p class="add-direction__subparagraph">Нет нужной вам валюты? Напишите нам: <span class="add-direction__subparagraph--span">@telegram</span></p>
+                      <p class="form-direct__pagaraph">Получаете</p>
+                      <div class="form-group">
+                        <div class="dropdown">
+                            <button class="dropdown__button">
+                              <img class="dropdown__currency-img" src="./images/currency.svg" alt="">
+                              <span class="dropdown__currency-text">Наличные</span>
+                              <span class="dropdown__currency-type">RUB</span>
+                            </button>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="Smart Chain">
+                                  <img class="dropdown__item-img" src="./images/bnb-coin.svg" alt="">
+                                  <span class="dropdown__item-text">Smart Chain</span>
+                                  <span class="dropdown__item-type">Bnb</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="Smart Chain 2">
+                                  <img class="dropdown__item-img" src="./images/coin-logo-one.svg" alt="">
+                                  <span class="dropdown__item-text">PancakeSwap</span>
+                                  <span class="dropdown__item-type">Cake</span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="rub">
+                                  <img class="dropdown__item-img" src="./images/currency.svg" alt="">
+                                  <span class="dropdown__item-text">Наличные</span>
+                                  <span class="dropdown__item-type">RUB</span>
+                                </li>
+                            </ul>
+                            <input type="text" name="select-category" value="" class="dropdown__input-hidden" >
+                        </div>
+                      </div>
+                      <p class="form-direct__pagaraph">Минимальная сумма</p>
+                      <div class="form-input">
+                        <input class="form-input__summ" type="text" value="800.00">
+                        <span class="form-input__span">RUB</span>
+                      </div>
+                      <p class="form-direct__pagaraph">Максимальная сумма</p>
+                      <div class="form-input">
+                        <input class="form-input__summ" type="text" value="800.00">
+                        <span class="form-input__span">RUB</span>
+                      </div>
+                      <p class="form-direct__pagaraph">Резерв</p>
+                      <div class="form-input">
+                        <input class="form-input__summ" type="text" value="800.00">
+                        <span class="form-input__span">RUB</span>
+                      </div>
+                      <p class="form-direct__pagaraph">Город</p>
+                      <div class="form-group form-margin">
+                        <div class="dropdown">
+                            <button class="dropdown__button">
+                              <img class="dropdown__currency-img" src="" alt="">
+                              <span class="dropdown__currency-text">Выберите город</span>
+                              <span class="dropdown__currency-type"></span>
+                            </button>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="Smart Chain">
+                                  <img class="dropdown__item-img" src="" alt="">
+                                  <span class="dropdown__item-text">Москва</span>
+                                  <span class="dropdown__item-type"></span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="Smart Chain 2">
+                                  <img class="dropdown__item-img" src="" alt="">
+                                  <span class="dropdown__item-text">Санкт-Питербург</span>
+                                  <span class="dropdown__item-type"></span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="rub">
+                                  <img class="dropdown__item-img" src="" alt="">
+                                  <span class="dropdown__item-text">Владимир</span>
+                                  <span class="dropdown__item-type"></span>
+                                </li>
+                            </ul>
+                            <input type="text" name="select-category" value="" class="dropdown__input-hidden" >
+                        </div>
+                      </div>
+                      <p class="add-direction__subparagraph">Нет нужной вам валюты? Напишите нам: <span class="add-direction__subparagraph--span">@telegram</span></p>
                     </div>
-                  </div>
-                </form>
+                    <div class="form__two-block">
+                      <p class="form-direct__pagaraph">Источник курса</p>
+                      <div class="form-group form-margin">
+                        <div class="dropdown">
+                            <button class="dropdown__button">
+                              <img class="dropdown__currency-img" src="" alt="">
+                              <span class="dropdown__currency-text">Binance</span>
+                              <span class="dropdown__currency-type"></span>
+                            </button>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__list-item" data-value="Smart Chain">
+                                  <img class="dropdown__item-img" src="" alt="">
+                                  <span class="dropdown__item-text">Antiswap</span>
+                                  <span class="dropdown__item-type"></span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="Smart Chain 2">
+                                  <img class="dropdown__item-img" src="" alt="">
+                                  <span class="dropdown__item-text">SwapAnti</span>
+                                  <span class="dropdown__item-type"></span>
+                                </li>
+                                <li class="dropdown__list-item" data-value="rub">
+                                  <img class="dropdown__item-img" src="" alt="">
+                                  <span class="dropdown__item-text">Bitcoin</span>
+                                  <span class="dropdown__item-type"></span>
+                                </li>
+                            </ul>
+                            <input type="text" name="select-category" value="" class="dropdown__input-hidden" >
+                        </div>
+                      </div>
+                    </div>
+                    <p class="add-direction__subparagraph">Хотите брать курсы из другого источника? Напишите нам в телеграм: <span class="add-direction__subparagraph--span">@telegram</span></p>
+                    <div class="form-block__two">
+                      <div class="form-block__wrap">
+                        <div class="form-block__one">
+                          <p class="form-block__pagaraph">Понижающий процент</p>
+                          <div class="form-wrap ">
+                            <input class="form-input__summ" type="text" value="800.00">
+                            <span class="form-input__span">%</span>
+                          </div>
+                          <p class="form__paragraph-bott">Чем выше понижающий процент, тем <span class="form__span-color">больше ваша выгода</span> и <span class="form__span-red">меньше выгода клиента.</span></p>
+                        </div>
+                        <div class="form-block__two1">
+                          <p class="form-block__pagaraph">Комиссия AntiSwap 0.5%</p>
+                          <div class="form-wrap ">
+                            <input class="form-input__summ" type="text" value="800.00">
+                            <span class="form-input__span">0.5%</span>
+                          </div>
+                          <p class="form__paragraph-bott">Мы тратим комиссию на улучшение функционала и раскрутку сервиса. Комиссия списывается с депозита.</p>
+                        </div>
+                      </div>
+                      <p class="form-direct__pagaraph">Резерв</p>
+                      <div class="form-input">
+                        <input class="form-input__summ" type="text" value="800.00">
+                        <span class="form-input__span">RUB</span>
+                      </div>
+                    </div>
+                    <div class="form-block__three">
+                      <div class="form-three__wrap">
+                        <button class="form-three__butt my-vector__conclusion" type="submit">Добавить направление</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>  
           </div>

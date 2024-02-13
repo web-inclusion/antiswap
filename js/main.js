@@ -29,14 +29,17 @@ try {
   
         window.removeEventListener('keydown', closeModal);
       }
+      document.body.classList.remove('body-overflor');
     }
   
     const openModal = () => {
       modalElem.style.visibility = 'visible';
       modalElem.style.opacity = 1;
-      window.addEventListener('keydown', closeModal)
+      window.addEventListener('keydown', closeModal);
+      document.body.classList.add('body-overflor');
     };
-  
+    
+
     buttonElems.forEach(btn => {
       btn.addEventListener('click', openModal);
     });
@@ -47,6 +50,12 @@ try {
     modal: '.modal',
     btnOpen: '.my-active__conclusion',
     btnClose: '.modal__close'
+  });
+
+  modalController({
+    modal: '.modal',
+    btnOpen: '.my-vector__conclusion',
+    btnClose: '.modal__close-vect'
   });
 } catch (error) {
   
@@ -113,6 +122,80 @@ if (document.getElementById("modal-notification__icon-close")) {
   });
 }
 
+
+
+
+try {
+  document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
+    const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
+    const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
+    const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
+    const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
+    const mainButton = dropDownWrapper.querySelector('.dropdown__button');
+    const spanTextBut = dropDownWrapper.querySelector('.dropdown__currency-text');
+    const spanText = dropDownWrapper.querySelector('.dropdown__item-text');
+    const currenImg = dropDownWrapper.querySelector('.dropdown__currency-img');
+    const typeImg = dropDownWrapper.querySelector('.dropdown__item-img');
+    const currType = dropDownWrapper.querySelector('.dropdown__currency-type');
+  
+  
+    // Клик по кнопке. Открыть/Закрыть select
+    dropDownBtn.addEventListener('click', function (e) {
+      dropDownList.classList.toggle('dropdown__list--visible');
+          this.classList.add('dropdown__button--active');
+          this.classList.add('dropdown__button--noradius');
+    });
+    
+    // Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
+    dropDownListItems.forEach(function (listItem) {
+      listItem.addEventListener('click', function (e) {
+        e.stopPropagation();
+        spanTextBut.innerText = this.querySelector('.dropdown__item-text').innerText;
+        currType.innerText = this.querySelector('.dropdown__item-type').innerText;
+        currenImg.src = this.querySelector('.dropdown__item-img').src;
+        dropDownBtn.focus();
+        dropDownInput.value = this.dataset.value;
+        dropDownList.classList.remove('dropdown__list--visible');
+        dropDownBtn.classList.remove('dropdown__button--noradius');
+        ('.dropdown__currency-type')
+      });
+    });
+    // Клик снаружи дропдауна. Закрыть дропдаун
+    document.addEventListener('click', function (e) {
+      if (e.target !== dropDownBtn) {
+        dropDownBtn.classList.remove('dropdown__button--active');
+        dropDownList.classList.remove('dropdown__list--visible');
+        dropDownBtn.classList.remove('dropdown__button--noradius');
+      }
+    });
+  
+    // Нажатие на Tab или Escape. Закрыть дропдаун
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Tab' || e.key === 'Escape') {
+        dropDownBtn.classList.remove('dropdown__button--active');
+        dropDownList.classList.remove('dropdown__list--visible');
+        dropDownBtn.classList.remove('dropdown__button--noradius');
+      }
+    });
+
+  
+    const condropbutt = dropDownWrapper.querySelector('.dropdown__button');
+    condropbutt.addEventListener('click', function (event) {
+      event.preventDefault()
+    });
+    // condropbutt.forEach(function (buttdown) {
+    //   buttdown.addEventListener('click', function (event) {
+    //     event.preventDefault()
+    //   });
+    // });
+
+  });
+  
+} catch (error) {
+  
+}
+
+
 try {
   // Полифилл для метода forEach для NodeList
   if (window.NodeList && !NodeList.prototype.forEach) {
@@ -123,73 +206,11 @@ try {
       }
     };
   }
+
+    const formbutt = document.querySelector('.form-three__butt');
+    formbutt.addEventListener('click', function (event) {
+      event.preventDefault()
+    });
 } catch (error) {
   
 }
-
-
-
-
-document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
-	const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
-	const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
-	const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
-	const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
-  const mainButton = dropDownWrapper.querySelector('.dropdown__button');
-  const spanTextBut = dropDownWrapper.querySelector('.dropdown__currency-text');
-  const spanText = dropDownWrapper.querySelector('.dropdown__item-text');
-  const currenImg = dropDownWrapper.querySelector('.dropdown__currency-img');
-  const typeImg = dropDownWrapper.querySelector('.dropdown__item-img');
-
-	// Клик по кнопке. Открыть/Закрыть select
-	dropDownBtn.addEventListener('click', function (e) {
-		dropDownList.classList.toggle('dropdown__list--visible');
-        this.classList.add('dropdown__button--active');
-        this.classList.add('dropdown__button--noradius');
-	});
-  
-	// Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
-	dropDownListItems.forEach(function (listItem) {
-		listItem.addEventListener('click', function (e) {
-			e.stopPropagation();
-			spanTextBut.innerText = this.querySelector('.dropdown__item-text').innerText;
-      currenImg.src = this.querySelector('.dropdown__item-img').src;
-			dropDownBtn.focus();
-			dropDownInput.value = this.dataset.value;
-			dropDownList.classList.remove('dropdown__list--visible');
-      dropDownBtn.classList.remove('dropdown__button--noradius');
-		});
-	});
-  console.log(spanText.innerText);
-	// Клик снаружи дропдауна. Закрыть дропдаун
-	document.addEventListener('click', function (e) {
-		if (e.target !== dropDownBtn) {
-			dropDownBtn.classList.remove('dropdown__button--active');
-			dropDownList.classList.remove('dropdown__list--visible');
-      dropDownBtn.classList.remove('dropdown__button--noradius');
-		}
-	});
-
-	// Нажатие на Tab или Escape. Закрыть дропдаун
-	document.addEventListener('keydown', function (e) {
-		if (e.key === 'Tab' || e.key === 'Escape') {
-			dropDownBtn.classList.remove('dropdown__button--active');
-			dropDownList.classList.remove('dropdown__list--visible');
-      dropDownBtn.classList.remove('dropdown__button--noradius');
-		}
-	});
-
-  dropDownWrapper.querySelector('.dropdown__button').addEventListener('click', function (event) {
-    event.preventDefault()
-    let value1 = dropDownWrapper.querySelector('.dropdown__button').value;
-    if (dropDownWrapper.querySelector('.dropdown__button').length == 0) {
-        thirdRow.innerHTML = value1;
-    } else {
-      dropDownWrapper.querySelector('.dropdown__button')[0].innerHTML = value1;
-    }
-  });
-  
-  
-});
-
-
